@@ -1,5 +1,5 @@
 '''
-p.143
+# p.143
 def sum(a,b):
     return a+b
 
@@ -38,7 +38,7 @@ def say():
 
 say()
 '''
-'''
+
 # p.147 여러 개의 입력값을 받는 함수 만들기
 def sum_mul(choice, *args):
     if choice == "sum":
@@ -54,24 +54,25 @@ def sum_mul(choice, *args):
         for i in args:
             result *= i
     elif choice == "div":
-        result = 100
+        result = 1000
         for i in args:
             result /= i
     return result
 
-result = sum_mul("sum", 1,2,3,4,5)
+a = sum_mul("sum", 1,2,3,4,5,6,7,8,9,10,11,12)
+print(a)
+
+result = sum_mul("sub", 1,2,3,4,5,6,7,8,9,10,11,12)
 print(result)
 
-result = sum_mul("sub", 1,2,3,4,5)
+result = sum_mul('mul', 1,2,3,4,5,6,7,8,9,10,11,12)
 print(result)
 
-result = sum_mul('mul', 1,2,3,4,5)
+result = sum_mul('div', 1,2,2,5,5)
 print(result)
 
-result = sum_mul('div', 1,2,2,5)
-print(result)
 '''
-'''
+
 # p.149 함수 결과값은 언제나 하나
 def sum_and_mul(a,b):
     return a+b, a*b
@@ -120,6 +121,7 @@ print(a)
 vartest2()
 print(a)
 '''
+'''
 # p.157 input 사용
 #number = input("숫자를 입력하세요 : ")
 #print(number)
@@ -128,4 +130,4 @@ print("life "+"is "+"too short!")
 print("life", "is", "too short", "!")
 for i in range(10):
     print(i, end=' ')
-
+'''
