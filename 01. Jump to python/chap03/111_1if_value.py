@@ -6,6 +6,7 @@
 #payment=""
 #payment=["현금","카드"]
 #payment=[]
+#집에서 추가작업
 payment=["현금"]
 
 if payment: # 조건문이 변수인 경우
