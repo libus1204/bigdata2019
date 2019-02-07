@@ -68,7 +68,7 @@ print(result)
 result = sum_mul('mul', 1,2,3,4,5,6,7,8,9,10,11,12)
 print(result)
 
-result = sum_mul('div', 1,2,2,5,5)
+result = sum_mul('div', 1,2,2,5,5,5)
 print(result)
 
 '''
