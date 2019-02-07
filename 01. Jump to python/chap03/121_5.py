@@ -53,3 +53,5 @@ while True:
         elif not year == 0 and count%4 == 0 :
             year -= 1
             print("축하합니다. 연간회원권 구매 이벤트에 당첨되셨습니다. 연간 회원 할인 티켓을 발행합니다. 잔여 할인 티켓 %s장" %(year)) 
+
+    # modify1 변경사항은 자동으로 저장
