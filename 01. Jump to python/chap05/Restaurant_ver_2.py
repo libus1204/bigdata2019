@@ -12,7 +12,7 @@ class MyRestaurant_ver_2:
         print("%s 레스토랑 문닫습니다." % self.restaurant_name)
 name = 0
 name_list = ['first','second','third']
-for count in range(0, 3):
+for count in range(3):
     name_list[count] = str(input("레스토랑 이름과 요리 종류를 선택하세요.(공백으로 구분) : "))
     name_list[count] = MyRestaurant_ver_2(name, type)
     name_list[count].describe_restaurant()
