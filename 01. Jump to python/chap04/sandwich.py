@@ -7,7 +7,7 @@ def input_ingredient():
     while True:
         ingredient_list.append(str(input("안녕하세요. 원하시는 재료를 입력하세요: ")))
         for ingredient in ingredient_list:
-           if ingredient == "종료" : return ingredient_list
+           if ingredient == "종료": return ingredient_list
 
 def make_sandwiches(ingredient_list):
     print("샌드위치를 만들겠습니다.")
@@ -15,7 +15,7 @@ def make_sandwiches(ingredient_list):
         if ingredient == "종료":
             print("여기 주문하신 샌드위치 만들었습니다. 맛있게 드세요.")
             break
-        else: print(ingredient+"를 추가합니다.")
+        else: print(ingredient+" 추가합니다.")
 
 if input_num == 1:
     input_ingredient()
