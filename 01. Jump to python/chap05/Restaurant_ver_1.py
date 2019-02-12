@@ -2,6 +2,7 @@ user_input = str(input("레스토랑 이름과 요리 종류를 선택하세요.
 user_restaurant = user_input.split(' ')
 name = user_restaurant[0]
 type = user_restaurant[1]
+
 class MyRestaurant_ver_1:
     def __init__(self, name, type):
         self.restaurant_name = name
