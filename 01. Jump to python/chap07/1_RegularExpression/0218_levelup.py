@@ -55,12 +55,11 @@ import re
 # p = re.compile('(blue|white|red)')
 # print(p.sub('colour', 'blue socks and red shoes'))
 
-p = re.compile(r'\w+\s+\d+[-]\d+[-](\d+)')
+
 data = """
 park 010-9999-9988
 kim 010-9909-7789
 lee 010-8789-7768
 """
-m = p.(data)
-print(m)
-# print(p.sub('####', data))
+p = re.compile((r'(\d{4}[-])\d{4}'),re.MULTILINE)
+print(p.sub("\g<1>####",data))
