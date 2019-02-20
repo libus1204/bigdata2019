@@ -1,0 +1,15 @@
+<student_list>
+	<student name="상민" sex="남">
+		<age>30</age>
+		<major>전자 공학</major>
+		<practicable_computer_languages>
+			<language name="C" level="하">
+				<period value="6개월" />
+			</language>
+			<language name="C++" level="하">
+				<period value="6개월" />
+			</language>
+		</practicable_computer_languages>
+	</student>
+</student_list>
+
