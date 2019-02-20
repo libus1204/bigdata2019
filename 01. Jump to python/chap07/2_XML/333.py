@@ -16,10 +16,10 @@ print(from_tags)
 from_text = note.findtext("from")
 print(from_text)
 
-childs = note.getiterator()
-print(childs)
-childs = note.getchildren()
-print(childs)
+# childs = note.getiterator()
+# print(childs)
+# childs = note.getchildren()
+# print(childs)
 
 # for parent in tree.getiterator():
 #     for child in parent:

@@ -51,7 +51,7 @@
 	<student name="치우" sex="남">
 		<age>30</age>
 		<major>신문방송학</major>
-		<practicable_computer_language />
+		<practicable_computer_languages />
 	</student>
 	<student name='현기' sex='남'>
 		<age>28</age>
