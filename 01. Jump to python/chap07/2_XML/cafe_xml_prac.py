@@ -96,7 +96,7 @@ def all_information():
             if computer_language_name[0] == 'None':
                 print("없음",end=" ")
             else:
-                print("\n  > "+computer_language_name[0]+" (학습기간 : "+computer_language_value[0]+"), Level : "+computer_language_level[0],end=" ")
+                print("\n  > "+computer_language_name[0]+" (학습기간 : "+computer_language_value[0]+", Level : "+computer_language_level[0]+")",end=" ")
             computer_language_level.pop(0)
             computer_language_value.pop(0)
             computer_language_name.pop(0)
