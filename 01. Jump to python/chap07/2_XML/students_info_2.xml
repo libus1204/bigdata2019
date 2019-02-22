@@ -3,8 +3,9 @@
 	<student ID="ITT001" name="이영호" sex="남">
 		<age>45</age>
 		<major>경영학</major>
-		<practicable_computer_languages />
-	</student>
+		<practicable_computer_languages>
+	</practicable_computer_languages>
+</student>
 	<student ID="ITT002" name="윤민선" sex="여">
 		<age>25</age>
 		<major>컴퓨터 공학</major>
@@ -12,7 +13,7 @@
 			<language level="중" name="C">
 				<period value="1년" />
 			</language>
-			<language level="하" name="Java">
+			<language level="상" name="Java">
 				<period value="1년" />
 			</language>
 			<language level="하" name="C++">
@@ -21,10 +22,10 @@
 		</practicable_computer_languages>
 	</student>
 	<student ID="ITT003" name="김상민" sex="남">
-		<age>30</age>
+		<age>54</age>
 		<major>전자 공학</major>
 		<practicable_computer_languages>
-			<language level="하" name="C">
+			<language level="상" name="파이썬">
 				<period value="6개월" />
 			</language>
 		<language level="하" name="C++">
@@ -52,7 +53,7 @@
 	<student ID="ITT006" name="김치우" sex="남">
 		<age>30</age>
 		<major>신문방송학</major>
-		<practicable_computer_languages />
+		<practicable_computer_languages><language level="하" name="\"><period value="1년" /></language></practicable_computer_languages>
 	</student>
 	<student ID="ITT007" name="민현기" sex="남">
 		<age>28</age>
@@ -78,4 +79,4 @@
 			</language>
 		</practicable_computer_languages>
 	</student>
-<student ID="ITT8" name="이영호" sex="남"><age>39</age><major>스타크래프트</major><practicable_computer_languages /></student></student_list>
+</student_list>

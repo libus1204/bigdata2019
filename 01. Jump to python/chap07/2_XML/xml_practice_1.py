@@ -87,3 +87,4 @@ while True:
     elif user_input == '3':
         print('\n학생 정보 분석 완료!')
         exit()
+

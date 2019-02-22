@@ -1,4 +1,4 @@
-from xml.etree.ElementTree import parse
+from xml.etree.ElementTree import parse, ElementTree, SubElement
 tree = parse("students_info_2.xml")
 root = tree.getroot()
 students_tag = root.findall('student')
@@ -10,10 +10,22 @@ def name_and_age(age_list):
         print(" %s : %s" % (list_in_name, list_in_age),end=" ")
     print(" ]")
 def main_menu():
-    print("<화면 출력>\n학생정보 XML 데이터 분석 시작..\n\n"
+    print("\n\n<화면 출력>\n학생정보 XML 데이터 분석 시작..\n\n"
           "1. 요약정보\n2. 입력\n3. 조회\n4. 수정\n5. 삭제\n6. 종료")
     user_input = int(input("메뉴 입력 : "))
-    return user_input
+    if user_input == 1:
+        menu_1()
+    elif user_input == 6:
+        print("\n학생 정보 분석 완료!")
+        exit()
+    elif user_input == 2:
+        menu_2()
+    elif user_input == 3:
+        menu_3_main()
+    elif user_input == 4:
+        menu_4()
+    elif user_input == 5:
+        menu_5()
 def menu_1():
     male_count = 0
     female_count = 0
@@ -73,7 +85,9 @@ def menu_2():
     print("<신규 학생 정보 입력>")
     while True:
         new_name = input("- 이름을 입력하세요.(종료는 'Enter' 입력) : ")
-        if not new_name: break
+        if not new_name:
+            break
+            main_menu()
         else:
             new_sex = input("- 성별을 입력하세요 : ")
             new_age = input("- 나이를 입력하세요 : ")
@@ -81,28 +95,20 @@ def menu_2():
             print("- 사용 가능한 컴퓨터 언어를 입력하세요 : ")
             new_lang = input(" > 언어 이름(종료는 'Enter' 입력) : ")
             if not new_lang :
-                from xml.etree.ElementTree import SubElement, dump, ElementTree
-                it_num = "ITT" + str(students_count)
-                tree = parse("students_info_2.xml")
-                root = tree.getroot()
+                id_student = int(str(students_tag[-1].get("ID"))[3:])+1
+                it_num = "ITT" + str(id_student).zfill(3)
                 a = SubElement(root, "student", ID=it_num, name=new_name, sex=new_sex)
                 SubElement(a, "age").text = new_age
                 SubElement(a, "major").text = new_major
-                b = SubElement(a, "practicable_computer_languages")
+                SubElement(a, "practicable_computer_languages")
                 ElementTree(root).write("students_info_2.xml", encoding="utf-8", xml_declaration=True)
-            new_period = input(" > 학습 기간(년/개월 단위) : ")
-            new_level = input(" > 수준(상, 중, 하) : ")
-            menu_2_input_data(new_name, new_sex, new_age, new_major, new_lang, new_period, new_level)
+            else:
+                new_period = input(" > 학습 기간(년/개월 단위) : ")
+                new_level = input(" > 수준(상, 중, 하) : ")
+                menu_2_input_data(new_name, new_sex, new_age, new_major, new_lang, new_period, new_level)
 def menu_2_input_data(new_stu_name, new_stu_sex, new_stu_age, new_stu_major, new_stu_lang, new_stu_period, new_stu_level):
-    from xml.etree.ElementTree import SubElement, dump, ElementTree
-    if students_count < 10 :
-        it_num = "ITT"+"00"+str(students_count+1)
-    elif students_count >=10 and students_count <= 99 :
-        it_num = "ITT"+"0"+str(students_count+1)
-    elif students_count >= 100:
-        it_num = "ITT"+str(students_count+1)
-    tree = parse("students_info_2.xml")
-    root = tree.getroot()
+    id_student = int(str(students_tag[-1].get("ID"))[3:]) + 1
+    it_num = "ITT" + str(id_student).zfill(3)
     a = SubElement(root, "student", ID=it_num, name=new_stu_name, sex=new_stu_sex)
     SubElement(a, "age").text=new_stu_age
     SubElement(a, "major").text=new_stu_major
@@ -120,16 +126,12 @@ def menu_3_main():
     if user_menu3_input == '3':
         main_menu()
 def menu_3_1():
-    from xml.etree.ElementTree import parse
-    tree = parse("students_info_2.xml")
-    root = tree.getroot()
-    students_tag = root.findall('student')
-    students_count = len(root)
     while True:
         print("\n1. ID\n2. 이름\n3. 나이\n4. 전공\n5. 컴퓨터 언어 명\n6. 컴퓨터 언어 학습 기간\n7. 컴퓨터 언어 레벨\n8. 상위 메뉴")
         user_menu_3_1_input = input("메뉴 입력 : ")
         students_order = []
         if user_menu_3_1_input == '8':
+            break
             menu_3_main()
         user_menu_3_1_search = input("검색어를 입력하세요 : ")
         if user_menu_3_1_input == '1':
@@ -146,27 +148,29 @@ def menu_3_1():
                     students_order.append(student)
         elif user_menu_3_1_input == '4':
             for student in range(students_count):
-                if students_tag[student].findtext('major') == user_menu_3_1_search:
+                if user_menu_3_1_search in students_tag[student].findtext('major'):
                     students_order.append(student)
         elif user_menu_3_1_input == '5':
             for student in range(students_count):
-                if students_tag[student].find('practicable_computer_languages'):
-                    for language in students_tag[student].findall('language'):
-                        if language.get('name') == user_menu_3_1_search:
+                if students_tag[student].find('practicable_computer_languages').text:
+                    for languages in students_tag[student].find('practicable_computer_languages').findall('language'):
+                        if languages.get('name') == user_menu_3_1_search:
                             students_order.append(student)
         elif user_menu_3_1_input == '6':
             for student in range(students_count):
-                if students_tag[student].find('practicable_computer_languages'):
-                    for language in students_tag[student].findall('language'):
-                        for lang_value in language.findall('period'):
+                if students_tag[student].find('practicable_computer_languages').text:
+                    for languages in students_tag[student].find('practicable_computer_languages').findall('language'):
+                        for lang_value in languages.findall('period'):
                             if lang_value.get('value') == user_menu_3_1_search:
                                 students_order.append(student)
         elif user_menu_3_1_input == '7':
             for student in range(students_count):
-                if students_tag[student].find('practicable_computer_languages'):
-                    for language in students_tag[student].findall('language'):
-                        if language.get('level') == user_menu_3_1_search:
+                if students_tag[student].find('practicable_computer_languages').text:
+                    for languages in students_tag[student].find('practicable_computer_languages').findall('language'):
+                        if languages.get('level') == user_menu_3_1_search:
                             students_order.append(student)
+                            set1 = set(students_order)
+                            students_order = list(set1)
         if len(students_order) == 1:
             student = students_order[0]
             print("\n* %s" % students_tag[student].get('name'),end= " ")
@@ -189,6 +193,11 @@ def menu_3_1():
                                                students_tag[student].findtext('age'), students_tag[student].get('sex')), end=" ")
             print("")
 def menu_3_2():
+    from xml.etree.ElementTree import parse
+    tree = parse("students_info_2.xml")
+    root = tree.getroot()
+    students_tag = root.findall('student')
+    students_count = len(root)
     print("\n< 전체 학생 데이터 >")
     for student in range(students_count):
         print("\n* %s" % students_tag[student].get('name'))
@@ -196,48 +205,85 @@ def menu_3_2():
         print(" - 나이 : %s" % students_tag[student].findtext('age'))
         print(" - 전공 : %s" % students_tag[student].findtext('major'))
         print(" - 사용 가능한 컴퓨터 언어 : ", end=" ")
-        if students_tag[student].find('practicable_computer_languages').text:
+        if students_tag[student].find('practicable_computer_languages'):
             for languages in students_tag[student].find('practicable_computer_languages').findall('language'):
                 for lang_value in languages.findall('period'):
                     print("\n  > %s (학습기간 : %s, Level : %s)" % (languages.get('name'), lang_value.get('value'),
                                                                 languages.get('level')), end=" ")
+        else:
+            print("없음", end=" ")
 def menu_4():
-    while True:
-        languages_count = 5
-        insert_num_user_want = 0
-        user_insert_num = input("수정할 학생의 ID를 입력하세요 :")
-        for i in range(students_count):
-            for student in range(students_count):
-                if students_tag[student].get('ID') == user_insert_num:
-                    student_insert = student
-        print("1. 이름 : %s" %students_tag[student_insert].get("name"))
-        print("2. 성별 : %s" %students_tag[student_insert].get("sex"))
-        print("3. 나이 : %s" % students_tag[student_insert].findtext("age"))
-        print("4. 전공 : %s" % students_tag[student_insert].findtext('major'))
-        print("사용 가능한 언어")
-        if students_tag[student_insert].find('practicable_computer_languages').text:
+    languages_count = 5
+    user_insert_num = input("수정할 학생의 ID를 입력하세요 :")
+    for student in range(students_count):
+        if students_tag[student].get('ID') == user_insert_num:
+            student_insert = student
+    # for student_insert in range(students_count):
+    print("1. 이름 : %s" % students_tag[student_insert].get("name"))
+    print("2. 성별 : %s" % students_tag[student_insert].get("sex"))
+    print("3. 나이 : %s" % students_tag[student_insert].findtext("age"))
+    print("4. 전공 : %s" % students_tag[student_insert].findtext('major'))
+    print("사용 가능한 언어",end=" ")
+    if students_tag[student_insert].find('practicable_computer_languages').text:
+        for languages in students_tag[student_insert].find('practicable_computer_languages').findall('language'):
+            for lang_value in languages.findall('period'):
+                print("%s. %s" % (languages_count, languages.get('name')))
+                print("%s. 학습기간 : %s" % (languages_count + 1, lang_value.get('value')))
+                print("%s. Level : %s" % (languages_count + 2, languages.get('level')))
+                languages_count += 3
+    else: print("없음. 추가하시려면 엔터를 누르세요.")
+    insert_num = int(input("\n수정할 항목의 번호를 입력하세요 : "))
+    if not students_tag[student_insert].find('practicable_computer_languages').text and insert_num == 5:
+        modify_lang_name = input("추가하실 언어를 입력하세요 : ")
+        modify_period = input("추가하실 기간을 입력하세요 : ")
+        modify_level = input("추가하실 레벨을 입력하세요 : ")
+        b = students_tag[student_insert][2]
+        c = SubElement(b, "language", level=modify_level, name=modify_lang_name)
+        SubElement(c, "period", value=modify_period)
+        ElementTree(root).write("students_info_2.xml", encoding="utf-8", xml_declaration=True)
+        print("\n* %s" % students_tag[student_insert].get('name'))
+        print(" - 성별 : %s" % students_tag[student_insert].get('sex'))
+        print(" - 나이 : %s" % students_tag[student_insert].findtext('age'))
+        print(" - 전공 : %s" % students_tag[student_insert].findtext('major'))
+        print(" - 사용 가능한 컴퓨터 언어 : ", end=" ")
+        if students_tag[student_insert].find('practicable_computer_languages'):
             for languages in students_tag[student_insert].find('practicable_computer_languages').findall('language'):
                 for lang_value in languages.findall('period'):
-                    print("%s. %s" % (languages_count, languages.get('name')))
-                    print("%s. 학습기간 : %s" % (languages_count+1, lang_value.get('value')))
-                    print("%s. Level : %s" % (languages_count+2, languages.get('level')))
-                    languages_count += 3
-        insert_num = input("수정할 항목의 번호를 입력하세요 : ")
-        insert_contents = input("수정할 값을 입력하세요 : ")
-        # if insert_num == '1':
-        #     students_tag[student_insert].get("name") = insert_contents
+                    print("\n  > %s (학습기간 : %s, Level : %s)" % (languages.get('name'), lang_value.get('value'),
+                                                                languages.get('level')), end=" ")
+        main_menu()
+    insert_contents = input("수정할 값을 입력하세요 : ")
+    if insert_num == 3:
+        students_tag[student_insert][0].text = insert_contents
+    if insert_num == 4:
+        students_tag[student_insert][0].text = insert_contents
+    if insert_num >= 5:
+            sum_lang = students_tag[student_insert].find('practicable_computer_languages').findall('language')
+            cal = (insert_num-5)//3
+            if insert_num % 3 == 2:
+                sum_lang[cal].set("name", insert_contents)
+            elif insert_num % 3 == 0:
+                sum_lang[cal].find('period').set("value", insert_contents)
+            elif insert_num % 3 == 1:
+                sum_lang[cal].set("level", insert_contents)
+    ElementTree(root).write("students_info_2.xml", encoding="utf-8", xml_declaration=True)
+    print("\n* %s" % students_tag[student_insert].get('name'))
+    print(" - 성별 : %s" % students_tag[student_insert].get('sex'))
+    print(" - 나이 : %s" % students_tag[student_insert].findtext('age'))
+    print(" - 전공 : %s" % students_tag[student_insert].findtext('major'))
+    print(" - 사용 가능한 컴퓨터 언어 : ", end=" ")
+    if students_tag[student_insert].find('practicable_computer_languages'):
+        for languages in students_tag[student_insert].find('practicable_computer_languages').findall('language'):
+            for lang_value in languages.findall('period'):
+                print("\n  > %s (학습기간 : %s, Level : %s)" % (languages.get('name'), lang_value.get('value'),
+                                                            languages.get('level')), end=" ")
+def menu_5():
+    user_delete = input("삭제할 ID를 입력하세요 : ")
+    for student in range(students_count):
+        if students_tag[student].get('ID') == user_delete:
+            delete_id = student
+    root.remove(students_tag[delete_id])
+    ElementTree(root).write("students_info_2.xml", encoding="utf-8", xml_declaration=True)
 
 while True:
-    user_menu = main_menu()
-    print(user_menu)
-    if user_menu == 1:
-        menu_1()
-    elif user_menu == 6:
-        print("\n학생 정보 분석 완료!")
-        exit()
-    elif user_menu == 2:
-        menu_2()
-    elif user_menu == 3:
-        menu_3_main()
-    elif user_menu == 4:
-        menu_4()
+    main_menu()

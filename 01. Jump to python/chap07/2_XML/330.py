@@ -14,3 +14,6 @@ SubElement(note, "body").text = "Don't forget me this weekend!"
 dump(note)
 
 ElementTree(note).write("note.xml")
+
+SubElement(note, "from").text = "Min"
+ElementTree(note).write("note.xml")

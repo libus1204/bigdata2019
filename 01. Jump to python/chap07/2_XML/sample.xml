@@ -1,0 +1,6 @@
+<root>
+	<a age="22" name="kkk">aaaa</a>
+	<b>
+		<c attrib="aaa">ana</c>
+	</b>
+</root>
