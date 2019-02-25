@@ -82,6 +82,10 @@ def menu_1():
     print(" - 40대 : %s명 (%0.1f%%) " % (age_40_count, (age_40_count / students_count) * 100), end=" ")
     name_and_age(age_40_list)
 def menu_2():
+    tree = parse("students_info_2.xml")
+    root = tree.getroot()
+    students_tag = root.findall('student')
+    students_count = len(root)
     print("<신규 학생 정보 입력>")
     while True:
         new_name = input("- 이름을 입력하세요.(종료는 'Enter' 입력) : ")
@@ -95,8 +99,10 @@ def menu_2():
             print("- 사용 가능한 컴퓨터 언어를 입력하세요 : ")
             new_lang = input(" > 언어 이름(종료는 'Enter' 입력) : ")
             if not new_lang :
+
                 id_student = int(str(students_tag[-1].get("ID"))[3:])+1
                 it_num = "ITT" + str(id_student).zfill(3)
+
                 a = SubElement(root, "student", ID=it_num, name=new_name, sex=new_sex)
                 SubElement(a, "age").text = new_age
                 SubElement(a, "major").text = new_major
@@ -107,6 +113,10 @@ def menu_2():
                 new_level = input(" > 수준(상, 중, 하) : ")
                 menu_2_input_data(new_name, new_sex, new_age, new_major, new_lang, new_period, new_level)
 def menu_2_input_data(new_stu_name, new_stu_sex, new_stu_age, new_stu_major, new_stu_lang, new_stu_period, new_stu_level):
+    tree = parse("students_info_2.xml")
+    root = tree.getroot()
+    students_tag = root.findall('student')
+    students_count = len(root)
     id_student = int(str(students_tag[-1].get("ID"))[3:]) + 1
     it_num = "ITT" + str(id_student).zfill(3)
     a = SubElement(root, "student", ID=it_num, name=new_stu_name, sex=new_stu_sex)
@@ -161,7 +171,7 @@ def menu_3_1():
                 if students_tag[student].find('practicable_computer_languages').text:
                     for languages in students_tag[student].find('practicable_computer_languages').findall('language'):
                         for lang_value in languages.findall('period'):
-                            if lang_value.get('value') == user_menu_3_1_search:
+                            if user_menu_3_1_search in lang_value.get('value'):
                                 students_order.append(student)
         elif user_menu_3_1_input == '7':
             for student in range(students_count):
@@ -214,7 +224,9 @@ def menu_3_2():
             print("없음", end=" ")
 def menu_4():
     languages_count = 5
-    user_insert_num = input("수정할 학생의 ID를 입력하세요 :")
+    user_insert_num = input("수정할 학생의 ID를 입력하세요(엔터시 메인메뉴로 이동) :")
+    if not user_insert_num:
+        main_menu()
     for student in range(students_count):
         if students_tag[student].get('ID') == user_insert_num:
             student_insert = student
@@ -231,16 +243,20 @@ def menu_4():
                 print("%s. 학습기간 : %s" % (languages_count + 1, lang_value.get('value')))
                 print("%s. Level : %s" % (languages_count + 2, languages.get('level')))
                 languages_count += 3
-    else: print("없음. 추가하시려면 엔터를 누르세요.")
+    else: print("없음. 추가하시려면 숫자 '5'를 누르세요.")
     insert_num = int(input("\n수정할 항목의 번호를 입력하세요 : "))
     if not students_tag[student_insert].find('practicable_computer_languages').text and insert_num == 5:
-        modify_lang_name = input("추가하실 언어를 입력하세요 : ")
-        modify_period = input("추가하실 기간을 입력하세요 : ")
-        modify_level = input("추가하실 레벨을 입력하세요 : ")
-        b = students_tag[student_insert][2]
-        c = SubElement(b, "language", level=modify_level, name=modify_lang_name)
-        SubElement(c, "period", value=modify_period)
-        ElementTree(root).write("students_info_2.xml", encoding="utf-8", xml_declaration=True)
+        while True:
+            modify_lang_name = input("추가하실 언어를 입력하세요(엔터 시 종료): ")
+            if not modify_lang_name:
+                break
+                main_menu()
+            modify_period = input("추가하실 기간을 입력하세요 : ")
+            modify_level = input("추가하실 레벨을 입력하세요 : ")
+            b = students_tag[student_insert][2]
+            c = SubElement(b, "language", level=modify_level, name=modify_lang_name)
+            SubElement(c, "period", value=modify_period)
+            ElementTree(root).write("students_info_2.xml", encoding="utf-8", xml_declaration=True)
         print("\n* %s" % students_tag[student_insert].get('name'))
         print(" - 성별 : %s" % students_tag[student_insert].get('sex'))
         print(" - 나이 : %s" % students_tag[student_insert].findtext('age'))
