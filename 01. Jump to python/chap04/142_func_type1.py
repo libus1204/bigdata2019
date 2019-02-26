@@ -5,4 +5,15 @@ def my_sum():
     print("num1+num2 = "+str(int(num1)+int(num2)))
 
 print("입력(parameter), 출력(return)이 없는 함수 테스트")
+
+
+
+
+
+
+
+
+
+
+
 my_sum()

@@ -4,5 +4,5 @@ import re
 #  스네이크 케이스 : 두 단어 이상의 조합을 _ 로 구분하는 것 (ex is_house Do_Something)
 text = "sleeps_well"
 p = re.compile('[a-z]+')
-for i in range(len(p.findall(text))):
-    p.findall(text)[0].capitalize()
+for i in p.findall(text):
+    print(i.capitalize(),end="")
