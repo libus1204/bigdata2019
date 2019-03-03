@@ -586,9 +586,25 @@ def youtube_rank():
     driver.implicitly_wait(1)
     driver.get(search_site)
 
+def instagram():
+    print("해쉬태그 검색어를 입력해주세요 : ", end="")
+    tag = input("#")
+    comment = "인스타그램 게시글을 불러오는 중 입니다."
+    for i in range(4):
+        sys.stdout.write("\r" + comment + "."*i)
+        sys.stdout.flush()
+        time.sleep(1)
+    url = 'https://m.instagram.com/explore/tags/' + tag
+
+    driver = webdriver.Chrome('C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe')
+
+    driver.implicitly_wait(5)
+    driver.get(url)
+
 def naver_mode():
     print("여러 가지 기능을 실행합니다.")
-    print("0. 실시간 검색\n1. 뉴스\n2. 맛집(블로그 검색)\n3. 쇼핑\n4. 번역\n5. 뮤직\n6. 유튜브 실시간 인기 동영상")
+    print("0. 실시간 검색\n1. 뉴스\n2. 맛집(블로그 검색)\n3. 쇼핑\n4. 번역\n5. 뮤직\n6. 유튜브 실시간 인기 동영상", end="")
+    print("\n7. 인스타그램 해쉬태그 검색")
     print("0 ~ 5 번은 네이버 서비스를 기반으로 합니다.")
     user_input_naver = input(" \n원하시는 검색 종류의 번호를 선택하세요. : ")
     if user_input_naver == '1':
@@ -614,7 +630,8 @@ def naver_mode():
         naver_rankup()
     elif user_input_naver == '6':
         youtube_rank()
-
+    elif user_input_naver == '7':
+        instagram()
 
 
 
