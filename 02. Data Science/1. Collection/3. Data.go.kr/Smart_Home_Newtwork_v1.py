@@ -2,6 +2,7 @@ import urllib.request
 import datetime, json, time, threading, re, sys
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from xml.etree.ElementTree import parse
 
 app_id="Hg0dhLPJ0jH4hWnGDKk6" # 본인 ID 입력 네이버
 app_pw="uv8hn6MlfZ" # 본인 Password 입력 네이버
@@ -22,9 +23,11 @@ g_Door = False
 g_Air_Conditional = False
 g_Humidifier = False
 g_DeHumidifier = False
+g_Speaker = False
+g_Television = False
 g_AI_Mode = False
 
-def get_Request_URL(url):  # (1) 기상 정보(동네예보정보 조회 서비스
+def get_Request_URL(url ):  # (1) 기상 정보(동네예보정보 조회 서비스
     req = urllib.request.Request(url)  # request 날리는 함수
     try:
         response = urllib.request.urlopen(req)
@@ -100,8 +103,9 @@ def print_main_menu():  # 메인 메뉴 출력
     print("\n1. 장비 상태 확인")
     print("2. 장비 제어")
     print("3. 스마트 모드")
-    print("4. 여러가지 기능;;")
-    print("5. 프로그램 종료")
+    print("4. 여러가지 기능")
+    print("5. 약국 정보")
+    print("6. 프로그램 종료")
 
 def print_device_status(device_name, device_status): # 기기 작동 상태 확인
     print("%s 상태 : " % device_name, end="")
@@ -115,8 +119,10 @@ def check_device_status():  # 기기 상태를 확인하는 함수, print_device
     print_device_status('3. 발코니(베란다) 창문', g_Balcony_Windows)
     print_device_status('4. 에어컨 ', g_Air_Conditional)
     print_device_status('5. 제습기 ', g_Humidifier)
-    print_device_status('6. 제습기 ', g_DeHumidifier)
+    print_device_status('6. 가습기 ', g_DeHumidifier)
     print_device_status('7. 출입문 ', g_Door)
+    print_device_status('8. 스피커 ', g_Speaker)
+    print_device_status('9. TV ', g_Television)
     print("-----------------------------------------")
 
 def control_device():  # 장비 제어// 입력하면 장비의 상태가 반대로 변경
@@ -133,8 +139,10 @@ def control_device():  # 장비 제어// 입력하면 장비의 상태가 반대
         if menu_num == '3': g_Balcony_Windows = not g_Balcony_Windows
         if menu_num == '4': g_Air_Conditional = not g_Air_Conditional
         if menu_num == '5': g_Humdifier = not g_Humidifier
-        if menu_num == '6': g_DeHumdifier = not g_DeHumidifier
+        if menu_num == '6': g_DeHumidifier = not g_DeHumidifier
         if menu_num == '7': g_Door = not g_Door
+        if menu_num == '8': g_Speaker = not g_Speaker
+        if menu_num == '9': g_Television = not g_Television
         elif not menu_num:
             break
         check_device_status()
@@ -175,14 +183,14 @@ def ai_device_control(weather_info):
             g_Air_Conditional = not g_Air_Conditional
             print("에어컨이 작동을 시작합니다.")
         else: pass
-    if int(humidity) <= 35 and int(humidity) >= 59:
-        if g_Humidifier == False:
-            g_Humidifier = not g_Humidifier
+    if int(humidity) <= 36 or int(humidity) >= 59:
+        if g_DeHumidifier == False:
+            g_DeHumidifier = not g_DeHumidifier
             print("가습기 작동을 시작합니다.")
         else: pass
     if int(humidity) >= 60 :
-        if g_DeHumidifier == False:
-            g_DeHumidifier = not g_DeHumidifier
+        if g_Humidifier == False:
+            g_Humidifier = not g_Humidifier
             print("제습기 작동을 시작합니다.")
     if int(rain) > 0:
         if g_Balcony_Windows == True:
@@ -192,16 +200,36 @@ def ai_device_control(weather_info):
     print("현재 기온은 %s 도, 현재 습도는 %s %%, 강수량은 %s mm 입니다." % (temperature, humidity, rain))
     print("")
 
-def update_scheduler():  # 인공지능 모드가 True 일 때 매 시 45분 1초마다 기상 업데이트
+def morning_alram(weather_info):
+    temperature = 0
+    rain = 0
+    for temp_element in range(len(read_Weather())):
+        if weather_info[temp_element]["category"] == "T1H":
+            temperature = weather_info[temp_element]["fcstValue"]
+            break
+    for rain_element in range(len(read_Weather())):
+        if weather_info[rain_element]["category"] == "RN1":
+            rain = weather_info[rain_element]["fcstValue"]
+            break
+    print("현재 기온은 %s 도, 강수량은 %s mm 입니다." % (temperature, rain))
+    if int(rain) > 1:
+        print("밖에 비가 내리니 우산을 챙기세요~")
+
+def update_scheduler():
     while True:
         if g_AI_Mode == False:
             continue
-        else:
-            if time.strftime('%M%S') == "4501":
-                print("매 시간 기상 업데이트를 시작합니다.")
-                get_Realtime_Weather_Info()
-                time.sleep(3)
-                break
+        elif time.strftime('%M%S') == "4531":   # 인공지능 모드가 True 일 때 매 시 45분 31초마다 기상 업데이트
+            print("매 시간 기상 업데이트를 시작합니다.")
+            get_Realtime_Weather_Info()
+            time.sleep(3)
+            break
+        elif time.strftime('%H%M%S') == "070000": # 아침 7시마다 기온, 강수량 알람
+            get_Realtime_Weather_Info()
+            time.sleep(3)
+            if g_Television == False: g_Television = not g_Television
+            else: continue
+            morning_alram(read_Weather())
 
 def smart_mode():  # 스마트모드
     global g_AI_Mode
@@ -340,28 +368,28 @@ def getPostData_news(post, jsonResult):
     return
 
 def naver_news_search(search_text):
-    jsonResult = []
+        jsonResult = []
 
-    sNode = 'news'
+        sNode = 'news'
 
-    print("\n외부 빅데이터를 수집합니다.")
-    display_count = 10
+        print("\n외부 빅데이터를 수집합니다.")
+        display_count = 10
 
-    jsonSearch = getNaverSearchResult(sNode, search_text, 1, display_count)
+        jsonSearch = getNaverSearchResult(sNode, search_text, 1, display_count)
 
-    index = 1 # 1번 루프를 돌 때 마다 100건이 조회되기 때문에 1000번을 넘기지 않게 하기 위한 인덱스
+        index = 1 # 1번 루프를 돌 때 마다 100건이 조회되기 때문에 1000번을 넘기지 않게 하기 위한 인덱스
 
-    while((jsonSearch!=None) and (jsonSearch['display']!=0) and index<6):
-        for post in jsonSearch['items']:
-            getPostData_news(post, jsonResult)
+        while((jsonSearch!=None) and (jsonSearch['display']!=0) and index<6):
+            for post in jsonSearch['items']:
+                getPostData_news(post, jsonResult)
 
-        nStart = jsonSearch['start'] + jsonSearch['display']
-        jsonSearch = getNaverSearchResult(sNode, search_text, nStart, display_count)
-        index = index+1
+            nStart = jsonSearch['start'] + jsonSearch['display']
+            jsonSearch = getNaverSearchResult(sNode, search_text, nStart, display_count)
+            index = index+1
 
-    with open('%s_naver_%s.json' %(search_text, sNode), 'w', encoding='utf8') as outfile:
-        retJson = json.dumps(jsonResult, indent=4,sort_keys=True, ensure_ascii=False)
-        outfile.write(retJson)
+        with open('%s_naver_%s.json' %(search_text, sNode), 'w', encoding='utf8') as outfile:
+            retJson = json.dumps(jsonResult, indent=4,sort_keys=True, ensure_ascii=False)
+            outfile.write(retJson)
 
 def naver_news_print(search_text):
     naver_news_data = []
@@ -387,6 +415,78 @@ def naver_news_print(search_text):
         print("일자 : %s" % naver_news_data[news_article_count]["pDate"])
         print("내용 : %s..." % list_describ[news_article_count][0:50])
         print("링크 : %s" % naver_news_data[news_article_count]["org_link"])
+
+def naver_news_rankup():
+    html = urllib.request.urlopen('https://news.naver.com')
+    soup = BeautifulSoup(html, 'html.parser')
+    tags = str(soup)
+    news_politic = []
+    news_economy = []
+    news_social = []
+    news_life = []
+    news_world = []
+    news_science = []
+    news_politic_url = []
+    news_economy_url = []
+    news_social_url = []
+    news_life_url = []
+    news_world_url = []
+    news_science_url = []
+    p_title = re.compile(r'nclicks.*>\n<strong>(.*)</strong>')
+    for i in range(len(p_title.findall(tags))):
+        if i >= 0 and i <= 4:
+            news_politic.append(p_title.findall(tags)[i])
+        elif i >= 5 and i <= 9:
+            news_economy.append(p_title.findall(tags)[i])
+        elif i >= 10 and i <= 14:
+            news_social.append(p_title.findall(tags)[i])
+        elif i >= 15 and i <= 19:
+            news_life.append(p_title.findall(tags)[i])
+        elif i >= 20 and i <= 24:
+            news_world.append(p_title.findall(tags)[i])
+        elif i >= 25 and i <= 29:
+            news_science.append(p_title.findall(tags)[i])
+
+    p_url = re.compile(r'" href="(.*nhn[?]mode=LSD&amp;mid=shm&amp;sid1=.*&amp.*)">\n')
+    list = p_url.findall(tags)
+    list2 = []
+    for i in list:
+        a = i.replace('amp;', '')
+        list2.append(a)
+    for i in range(len(list2)):
+        if i >= 1 and i <= 5:
+            news_politic_url.append(list2[i])
+        elif i >= 7 and i <= 11:
+            news_economy_url.append(list2[i])
+        elif i >= 13 and i <= 17:
+            news_social_url.append(list2[i])
+        elif i >= 19 and i <= 23:
+            news_life_url.append(list2[i])
+        elif i >= 25 and i <= 29:
+            news_world_url.append(list2[i])
+        elif i >= 31 and i <= 35:
+            news_science_url.append(list2[i])
+    print("\n1.정치\n2.경제\n3.사회\n4.생활/문화\n5.세계\n6.IT/과학")
+    news_want = input("\n카테고리를 선택하세요. : ")
+    print("")
+    if news_want == '1':
+        for count in range(5):
+            print("%s. %s [%s]" % (count + 1, news_politic[count], news_politic_url[count]))
+    elif news_want == '2':
+        for count in range(5):
+            print("%s. %s [%s]" % (count + 1, news_economy[count], news_economy_url[count]))
+    elif news_want == '3':
+        for count in range(5):
+            print("%s. %s [%s]" % (count + 1, news_social[count], news_social_url[count]))
+    elif news_want == '4':
+        for count in range(5):
+            print("%s. %s [%s]" % (count + 1, news_life[count], news_life_url[count]))
+    elif news_want == '5':
+        for count in range(5):
+            print("%s. %s [%s]" % (count + 1, news_world[count], news_world_url[count]))
+    elif news_want == '6':
+        for count in range(5):
+            print("%s. %s [%s]" % (count + 1, news_science[count], news_science_url[count]))
 
 def getPostData_shop(post, jsonResult):
     # Data Sampling
@@ -452,7 +552,7 @@ def naver_translate():
     import sys
     import urllib.request
     while True:
-        print("1. 한국어 -> 영어\n2. 영어 -> 한국어")
+        print("1. 한국어 -> 영어\n2. 영어 -> 한국어(미구현;;)")
         menu_trans = input("번호를 선택하세요 : ")
         search_text = input("문장을 입력하세요(엔터 입력시 메인화면으로 이동) : ")
         if menu_trans == '1':
@@ -505,7 +605,8 @@ def naver_translate():
             break
 
 def naver_music():
-    print("1. TOP 20 국내\n2. TOP 20 해외")
+    global g_Speaker
+    print("1. TOP 10 국내\n2. TOP 10 해외")
     menu_music = input("번호를 선택하세요 : ")
     print("")
     if menu_music == '1':
@@ -525,6 +626,12 @@ def naver_music():
                 korean_singer_list.append(singer)
         for count in range(1,11):
             print("%s. %s - %s" % (count, korean_sing_title_list[count], korean_singer_list[count]))
+        p_korean_artist = re.compile(r'" href="(.*)" title=".*">\n')
+        artist_info = p_korean_artist.findall(tags)
+        music_url = "https://music.naver.com"
+        print("아티스트 정보를 보시려면 번호를 눌러주세요 : ",end="")
+        artist_select = input("")
+        print("아티스트 정보 : %s" % (music_url+artist_info[int(artist_select)+1]))
     if menu_music == '2':
         html = urllib.request.urlopen('https://music.naver.com/listen/top100.nhn?domain=OVERSEA_V2')
         soup = BeautifulSoup(html, 'html.parser')
@@ -542,6 +649,20 @@ def naver_music():
                 pop_singer_list.append(pop_singer)
         for count in range(1,11):
             print("%s. %s - %s" % (count, pop_title_list[count], pop_singer_list[count]))
+        p_pop_artist = re.compile(r'" href="(.*)" title=".*">\n')
+        artist_info = p_pop_artist.findall(tags)
+        music_url = "https://music.naver.com"
+        print("아티스트 정보를 보시려면 번호를 눌러주세요 : ",end="")
+        artist_select = input("")
+        print("아티스트 정보 : %s" % (music_url+artist_info[int(artist_select)+1]))
+    menu_music_play = input("스피커를 통해 재생하시겠습니까? (Y/N) :  ")
+    if menu_music_play == 'Y':
+        print("\n스피커를 통해 TOP 10 재생을 시작합니다.") # 실제 재생은 어떻게? ㅠㅠㅠ
+        if g_Speaker == False:
+            g_Speaker = not g_Speaker
+            print("\n스피커를 실행합니다.")
+        else: pass
+    else: pass
 
 def naver_rankup():
     print('\n네이버 실시간 검색어 TOP 20')
@@ -601,41 +722,133 @@ def instagram():
     driver.implicitly_wait(5)
     driver.get(url)
 
-def naver_mode():
-    print("여러 가지 기능을 실행합니다.")
-    print("0. 실시간 검색\n1. 뉴스\n2. 맛집(블로그 검색)\n3. 쇼핑\n4. 번역\n5. 뮤직\n6. 유튜브 실시간 인기 동영상", end="")
-    print("\n7. 인스타그램 해쉬태그 검색")
+def game():
+    print("게임 순위\n1. 스팀게임\n2. 온라인 게임")
+    menu_game = input("번호를 선택하세요 : ")
+    if menu_game == '1':
+        html = urllib.request.urlopen("https://store.steampowered.com/search/?filter=topsellers")
+        soup = BeautifulSoup(html, 'html.parser')
+        tags = str(soup)
+        game_title = []
+        p_game_title = re.compile('<span class="title">(.*)</span>')
+        for count in range(len(p_game_title.findall(tags))):
+            game_title.append(p_game_title.findall(tags)[count])
+        game_discount = []
+        p_discount = re.compile('<div class="col search_discount responsive_secondrow">\n(.*)')
+        p_discount_again = re.compile('<span>(-\d\d%)</span')
+        for count2 in range(len(p_discount.findall(tags))):
+            if not p_discount_again.findall(p_discount.findall(tags)[count2]):
+                game_discount.append('0')
+            else:
+                game_discount.append(p_discount_again.findall(p_discount.findall(tags)[count2]))
+        game_price = []
+        p_price = re.compile(r'\b([0-9]+[,][0-9]+)\t')
+        for count3 in p_price.findall(tags):
+            game_price.append(count3)
+        print("\n ===== 스팀 게임 =====")
+        print("현 스팀 게임 순위, 할인율, 현재 가격")
+        for count4 in range(len(game_title)):
+            print("%s. %-53s %-5s %-6s " %(count4+1, game_title[count4], game_discount[count4][0], game_price[count4]))
+    elif menu_game == '2':
+        print("\n ===== 온라인 게임 =====")
+        print("게임 순위, 사이트")
+        html = urllib.request.urlopen("http://www.online-gameranking100.com/bbs/board.php?bo_table=online")
+        soup = BeautifulSoup(html, 'html.parser')
+        tags = str(soup)
+        online_game_title = []
+        p_online_title = re.compile(r'id=\d\d\d"><span>(.*)</span></a>')
+        for count in range(len(p_online_title.findall(tags))):
+            online_game_title.append(p_online_title.findall(tags)[count])
+        online_game_site = []
+        p_online_site = re.compile(r'bookmarksite.*(http.*'')[)]')
+        for count2 in range(len(p_online_site.findall(tags))):
+            online_game_site.append(p_online_site.findall(tags)[count2])
+
+        for order in range(10):
+            print("%s. %s [%s]" % (order+1, online_game_title[order], online_game_site[order][0:-1]))
+
+def function_mode():
+    global g_Television
+    print("\n여러 가지 기능을 실행합니다.")
+    if g_Television == False:
+        print("원활한 기능 실행을 위해 TV 를 작동시키겠습니까? (Y/N) : ", end="")
+        menu_tv_on = input("")
+        if menu_tv_on == 'Y':
+            g_Television = not g_Television
+            print("TV를 작동합니다.")
+        else: print("TV를 작동하지 않고 기능을 실행합니다.")
+    else: pass
+    print("\n0. 실시간 검색\n1. 뉴스\n2. 맛집(블로그 검색)\n3. 쇼핑\n4. 번역\n5. 뮤직\n6. 유튜브 실시간 인기 동영상", end="")
+    print("\n7. 인스타그램 해쉬태그 검색\n8. 게임")
     print("0 ~ 5 번은 네이버 서비스를 기반으로 합니다.")
-    user_input_naver = input(" \n원하시는 검색 종류의 번호를 선택하세요. : ")
-    if user_input_naver == '1':
-        print("\n============  뉴스를 검색하세요!  =============")
-        search_text = input("검색어를 입력하세요 : ")
-        naver_news_search(search_text)
-        naver_news_print(search_text)
-    elif user_input_naver == '2':
+    user_input = input(" \n원하시는 검색 종류의 번호를 선택하세요. : ")
+    if user_input == '1':
+        print("\n1. 실시간 뉴스\n2. 뉴스 검색")
+        menu_news = input("번호를 선택하세요 : ")
+        if menu_news == '1':
+            naver_news_rankup()
+        if menu_news == '2':
+            search_text = input("검색어를 입력하세요 : ")
+            naver_news_search(search_text)
+            naver_news_print(search_text)
+    elif user_input == '2':
         print("\n============  맛집을 검색하세요!  =============")
         search_text = input("검색어를 입력하세요 : ")
         naver_blog_search(search_text)
         naver_blog_print(search_text)
-    elif user_input_naver == '3':
+    elif user_input == '3':
         print("\n============  상품을 검색하세요!  =============")
         search_text = input("검색어를 입력하세요 : ")
         naver_shop_search(search_text)
         naver_shop_print(search_text)
-    elif user_input_naver == '4':
+    elif user_input == '4':
         naver_translate()
-    elif user_input_naver == '5':
+    elif user_input == '5':
         naver_music()
-    elif user_input_naver == '0':
+    elif user_input == '0':
         naver_rankup()
-    elif user_input_naver == '6':
+    elif user_input == '6':
         youtube_rank()
-    elif user_input_naver == '7':
+    elif user_input == '7':
         instagram()
+    elif user_input == '8':
+        game()
 
+def emergency():
+    print("대구광역시 동구 신암동에 소재한 약국을 검색합니다.")
 
+    class GetData:
+        access_key = "QEbF%2Bnfi5HCWciz2PTe%2FWlO%2F1by9CxB8jfRWiyq0IZm%2BrsVxcwMDX%2FkB%2Fb7alBc21fi9EwXCounWbKTu98MDdw%3D%3D"
+        end_point = "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire"
+        parameters = "?&serviceKey=" + access_key
+        parameters += "&Q0=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C"
+        parameters += "&Q1=%EB%8F%99%EA%B5%AC"
+        parameters += "&numOfRows=100"
+        url = end_point + parameters
 
+        def main(self):
+            data = urllib.request.urlopen(self.url).read()
+            f = open('동구_약국.xml', 'wb')
+            f.write(data)
+            f.close()
 
+    getData = GetData()
+    getData.main()
+    tree = parse('동구_약국.xml')
+    root = tree.getroot()
+    pharmacy_name = []
+    pharmacy_phone = []
+    pharmacy_addr = []
+    for a in root.getiterator("body"):
+        for b in a.getiterator("items"):
+            pharmacy_tags = b.findall("item")
+    for i in range(len(pharmacy_tags)):
+        if '신암' in pharmacy_tags[i].findtext("dutyAddr"):
+            pharmacy_name.append(pharmacy_tags[i].findtext("dutyName"))
+            pharmacy_addr.append(pharmacy_tags[i].findtext("dutyAddr"))
+            pharmacy_phone.append(pharmacy_tags[i].findtext("dutyTel1"))
+    for count in range(len(pharmacy_name)):
+        print("%s. %s\n - %s (%s)" % (count+1, pharmacy_name[count], pharmacy_addr[count], pharmacy_phone[count]))
 
 
 print("< 스마트 홈 네트워크 시뮬레이션 프로그램 ver 1.0 >")
@@ -656,8 +869,10 @@ while True:
     elif menu_num == 3:
         smart_mode()
     elif menu_num == 4:
-        naver_mode()
+        function_mode()
     elif menu_num == 5:
+        emergency()
+    elif menu_num == 6:
         print("프로그램을 종료합니다.")
         break
 

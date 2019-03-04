@@ -14,12 +14,16 @@ if menu_music == '1':
     for titles in p_korean_title.findall(tags):
         korean_sing_title_list.append(titles)
     p_korean_singer = re.compile(r'" title="(.*)">\n')
+    p_korean_artist = re.compile(r'" href="(.*)" title=".*">\n')
+    artist_info = p_korean_artist.findall(tags)
+    music_url = "https://music.naver.com"
+    print(music_url+artist_info[1])
     for singer in p_korean_singer.findall(tags):
         if singer == '자동완성 펼치기':
             pass
         else: korean_singer_list.append(singer)
-    print(korean_singer_list)
-    print(korean_sing_title_list)
+    # print(korean_singer_list)
+    # print(korean_sing_title_list)
 if menu_music == '2':
     html = urllib.request.urlopen('https://music.naver.com/listen/top100.nhn?domain=OVERSEA_V2')
     soup = BeautifulSoup(html, 'html.parser')
