@@ -66,7 +66,7 @@ def get_Realtime_Weather_Info():  # (1) 기상 정보(동네예보정보 조회 
 
         print("\n<<가장 최신 기상정보 업데이트를 실시합니다!!>>\n".center(30))
         Make_Weather_Json(day_time)
-
+#
 json_weather_result=[]
 yyyymmdd = time.strftime("%Y%m%d")
 day_time = time.strftime("%H%M")
@@ -76,3 +76,4 @@ x_coodinate = "89"
 y_coodinate = "91"
 
 get_Realtime_Weather_Info()
+# Make_Weather_Json(day_time)
