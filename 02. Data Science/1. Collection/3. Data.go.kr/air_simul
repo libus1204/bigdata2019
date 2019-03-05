@@ -1,0 +1,29 @@
+[
+    {
+        "baseDate": 1,
+        "baseTime": 2,
+        "category": "T1H",
+        "fcstTime": 6,
+        "fcstValue": 3,
+        "sim_nx": 7,
+        "sim_ny": 8
+    },
+    {
+        "baseDate": 1,
+        "baseTime": 2,
+        "category": "RN1",
+        "fcstTime": 6,
+        "fcstValue": 4,
+        "sim_nx": 7,
+        "sim_ny": 8
+    },
+    {
+        "baseDate": 1,
+        "baseTime": 2,
+        "category": "REH",
+        "fcstTime": 6,
+        "fcstValue": 5,
+        "nx": 7,
+        "ny": 8
+    }
+]

@@ -3,12 +3,11 @@ import datetime, json, time, threading, re, sys, ctypes
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from xml.etree.ElementTree import parse
-from collections import OrderedDict
 
 app_id="Hg0dhLPJ0jH4hWnGDKk6" # 본인 ID 입력 네이버
 app_pw="uv8hn6MlfZ" # 본인 Password 입력 네이버
-# access_key="QEbF%2Bnfi5HCWciz2PTe%2FWlO%2F1by9CxB8jfRWiyq0IZm%2BrsVxcwMDX%2FkB%2Fb7alBc21fi9EwXCounWbKTu98MDdw%3D%3D" # 공공데이터
-access_key="CYe%2BxZfEnJ0nHxomwRLowxGUT6fS623%2FB1j7%2B4AX7RZ0Itz5OoAWiKyLojAjyDrakdRp3%2BanNahGbu6aLEZYVg%3D%3D" # 공공데이터
+access_key="QEbF%2Bnfi5HCWciz2PTe%2FWlO%2F1by9CxB8jfRWiyq0IZm%2BrsVxcwMDX%2FkB%2Fb7alBc21fi9EwXCounWbKTu98MDdw%3D%3D" # 공공데이터
+# access_key="CYe%2BxZfEnJ0nHxomwRLowxGUT6fS623%2FB1j7%2B4AX7RZ0Itz5OoAWiKyLojAjyDrakdRp3%2BanNahGbu6aLEZYVg%3D%3D" # 공공데이터
 # access_key="GMAg38HVaGoDNnGL4DtAbKle1ggqtxQU8366X1IcaPrrCH08aZkSrMf9I%2BPIXTRFpofW%2Btu%2BdkstNSL0JZTh%2BA%3D%3D"
 json_weather_result=[]
 yyyymmdd = time.strftime("%Y%m%d")
@@ -62,7 +61,7 @@ def get_Weather_URL(day_time):  # (1) 기상정보(동네예보정보 조회 서
     else:
         return json.loads(retData)
 
-########### 날씨 json, xml 파일 생성 ###########
+########### 날씨 json 파일 생성 ###########
 def Make_Weather_Json(day_time):  # (1) 기상정보(동네예보정보 조회 서비스) json 파일 생성하는 함수
     jsonData = get_Weather_URL(day_time)
     if (jsonData['response']['header']['resultMsg'] == 'OK'):
@@ -86,7 +85,7 @@ def Make_Weather_Json(day_time):  # (1) 기상정보(동네예보정보 조회 �
     f = open('동구_신암동_초단기예보조회_%s.csv' % yyyymmdd, 'w')
     f.write('\n'.join(weather_for_csv))
     f.close()
-    print('동구_신암동_초단기예보조회_%s.json Saved' % yyyymmdd)
+    print('동구_신암동_초단기예보조회_%s.json Saved\n' % yyyymmdd)
     print('동구_신암동_초단기예보조회_%s.csv Saved\n' % yyyymmdd)
 
 ########### 날씨 실시간 정보 업데이트 ###########
@@ -122,7 +121,7 @@ def get_dust_URL():
     else:
         return json.loads(retData)
 
-########### 먼지 json, xml 파일 생성 ###########
+########### 먼지 json 파일 생성 ###########
 def make_dust_Json():
     jsonData = get_dust_URL()
     if (jsonData['list']):
@@ -174,8 +173,7 @@ def print_main_menu():  # 메인 메뉴 출력
     print("3. 스마트 모드")
     print("4. 여러가지 기능")
     print("5. 약국 정보")
-    print("6. 시뮬레이션")
-    print("7. 프로그램 종료")
+    print("6. 프로그램 종료")
 
 ########### 장비 작동/정지 상태 호출 ###########
 def print_device_status(device_name, device_status): # 기기 작동 상태 확인
@@ -206,19 +204,19 @@ def control_device():  # 장비 제어// 입력하면 장비의 상태가 반대
         check_device_status()
         # print_device_status()
         print("")
-        menu_num = input("상태를 변경할 기기의 번호를 입력하세요(엔터 입력시 메인 메뉴로 이동) : ")
+        menu_num = int(input("상태를 변경할 기기의 번호를 입력하세요(엔터 입력시 메인 메뉴로 이동) : "))
 
-        if menu_num == '1': g_Radiator = not g_Radiator
-        if menu_num == '2': g_Gas_Value = not g_Gas_Value
-        if menu_num == '3': g_Balcony_Windows = not g_Balcony_Windows
-        if menu_num == '4': g_Air_Conditional = not g_Air_Conditional
-        if menu_num == '5': g_Humidifier = not g_Humidifier
-        if menu_num == '6': g_DeHumidifier = not g_DeHumidifier
-        if menu_num == '7': g_Door = not g_Door
-        if menu_num == '8': g_Speaker = not g_Speaker
-        if menu_num == '9': g_Television = not g_Television
-        if menu_num == '10': g_Air_Cleaner = not g_Air_Cleaner
-        if not menu_num:
+        if menu_num == 1: g_Radiator = not g_Radiator
+        if menu_num == 2: g_Gas_Value = not g_Gas_Value
+        if menu_num == 3: g_Balcony_Windows = not g_Balcony_Windows
+        if menu_num == 4: g_Air_Conditional = not g_Air_Conditional
+        if menu_num == 5: g_Humidifier = not g_Humidifier
+        if menu_num == 6: g_DeHumidifier = not g_DeHumidifier
+        if menu_num == 7: g_Door = not g_Door
+        if menu_num == 8: g_Speaker = not g_Speaker
+        if menu_num == 9: g_Television = not g_Television
+        if menu_num == 10: g_Air_Cleaner = not g_Air_Cleaner
+        elif not menu_num:
             break
         check_device_status()
 
@@ -229,24 +227,23 @@ def ai_device_control(weather_info, dust_info):
     humidity = 0
     rain = 0
     air_pollution = 0
-    for temp_element in range(len(weather_info)):
+    for temp_element in range(len(read_Weather())):
         if weather_info[temp_element]["category"] == "T1H":
             temperature = weather_info[temp_element]["fcstValue"]
             break
-    for hum_element in range(len(weather_info)):
+    for hum_element in range(len(read_Weather())):
         if weather_info[hum_element]["category"] == "REH":
             humidity = weather_info[hum_element]["fcstValue"]
             break
-    for rain_element in range(len(weather_info)):
+    for rain_element in range(len(read_Weather())):
         if weather_info[rain_element]["category"] == "RN1":
             rain = weather_info[rain_element]["fcstValue"]
             break
-    for dust_element in range(len(dust_info)):
+    for dust_element in range(len(read_dust())):
         if dust_info[dust_element]['stationName'] == '신암동':
             air_pollution = dust_info[dust_element]['khaiGrade']
     print("\n -- 장비 제어를 시작합니다 -- ")
     print("")
-    time.sleep(2)
     print("-----------------------------------------------------------------")
     print(''' * 라디에이터는 실외 "3℃" 이하
  * 에어컨은 실외 "31℃" 이상
@@ -258,28 +255,27 @@ def ai_device_control(weather_info, dust_info):
  * 또한 메인 메뉴에서 수동으로 모든 기기 제어가 가능합니다.
  -----------------------------------------------------------------''')
     print("")
-    time.sleep(2)
     print('''현재 기상 상태는
 기온 %s 도, 습도 %s %%, 강수량 %s mm, 통합대기환경지수 %s 입니다.''' % (temperature, humidity, rain, air_pollution))
     if temperature <= 3:
         if g_Radiator == False:
             g_Radiator = not g_Radiator
-            print("\n라디에이터 작동을 시작합니다.")
+            print("라디에이터 작동을 시작합니다.")
         else: pass
-    if temperature >= 31:
+    if int(g_Air_Conditional) >= 31:
         if g_Air_Conditional == False:
             g_Air_Conditional = not g_Air_Conditional
-            print("\n에어컨이 작동을 시작합니다.")
+            print("에어컨이 작동을 시작합니다.")
         else: pass
-    if int(humidity) <= 35:
+    if int(humidity) <= 36 or int(humidity) >= 55:
         if g_DeHumidifier == False:
             g_DeHumidifier = not g_DeHumidifier
-            print("\n가습기 작동을 시작합니다.")
+            print("가습기 작동을 시작합니다.")
         else: pass
     if int(humidity) >= 60 :
         if g_Humidifier == False:
             g_Humidifier = not g_Humidifier
-            print("\n제습기 작동을 시작합니다.")
+            print("제습기 작동을 시작합니다.")
     if int(rain) > 0:
         if g_Balcony_Windows == True:
             g_Balcony_Windows = not g_Balcony_Windows
@@ -290,11 +286,11 @@ def ai_device_control(weather_info, dust_info):
             g_Balcony_Windows = not g_Balcony_Windows
             print("\n창문을 닫습니다")
             if g_Air_Cleaner == False:
-                print("\n공기청정기를 작동을 시작합니다.")
+                print("\n공기청정기를 작동합니다.")
                 g_Air_Cleaner = not g_Air_Cleaner
         else:
             if g_Air_Cleaner == False:
-                print("\n공기청정기를 작동을 시작합니다.")
+                print("\n공기청정기를 작동합니다.")
                 g_Air_Cleaner = not g_Air_Cleaner
 
 ########### 아침 7시 기상정보 알람 ###########
@@ -339,49 +335,21 @@ def terminate_ai_mode():
 
 ########### 스케쥴러 ###########
 def update_scheduler():
-    global g_Television
     while True:
         if g_AI_Mode == False:
             continue
-        elif time.strftime('%M%S') == "4602":   # 인공지능 모드가 True 일 때 매 시 45분 31초마다 기상 업데이트
-            time.sleep(3)
-            print("\n매 시간 기상 업데이트를 시작합니다.")
+        elif time.strftime('%M%S') == "2410":   # 인공지능 모드가 True 일 때 매 시 45분 31초마다 기상 업데이트
+            print("매 시간 기상 업데이트를 시작합니다.")
             get_Realtime_Weather_Info()
             make_dust_Json()
+            time.sleep(3)
             ai_device_control(read_Weather(), read_dust())
-            print("\n업데이트가 끝났습니다.\n이전 하던 작업을 계속 진행하세요.")
-            # print_main_menu()
-        elif time.strftime('%H%M%S') == "070000":  # 아침 7시마다 기온, 강수량, 공기오염도 알람
+        elif time.strftime('%H%M%S') == "070000": # 아침 7시마다 기온, 강수량 알람
             get_Realtime_Weather_Info()
             time.sleep(3)
             if g_Television == False: g_Television = not g_Television
             else: continue
             morning_alram(read_Weather())
-
-########## 환기 ###########
-# def ventil(weather_info, dust_info):
-#     global g_Balcony_Windows
-#     for rain_element in range(len(read_Weather())):
-#         if weather_info[rain_element]["category"] == "RN1":
-#             rain = weather_info[rain_element]["fcstValue"]
-#             break
-#     for dust_element in range(len(read_dust())):
-#         if dust_info[dust_element]["stationName"] == "신암동":
-#             air_pollution = dust_info[dust_element]["khaiGrade"]
-#     while True:
-#         if g_AI_Mode == False:
-#             continue
-#         elif int(rain) > 0:
-#             continue
-#         elif int(air_pollution) >= 4:
-#             continue
-#         else:
-#             if g_Balcony_Windows == True:
-#                 g_Balcony_Windows = not g_Balcony_Windows
-#                 time.sleep(5)
-#             elif g_Balcony_Windows == False:
-#                 g_Balcony_Windows = not g_Balcony_Windows
-#                 time.sleep(5)
 
 ########### 스마트모드 ###########
 def smart_mode():  # 스마트모드
@@ -390,35 +358,33 @@ def smart_mode():  # 스마트모드
     print("2. 인공지능 모드 상태 확인")
     print("3. 인공지능 모드 상태 변경")
     print("4. 실시간 기상정보 Update")
+    print("5. 메인 메뉴로 이동")
     print("")
-    menu_num = input("메뉴를 선택하세요(엔터 시 메인메뉴로 이동) : ")
-    if menu_num == '1':
+    menu_num = int(input("메뉴를 선택하세요 : "))
+    if menu_num == 1:
         print('''\n------------------------------------------------------
 * 스마트 모드란?
     - 기온, 습도, 온도 등의 데이터를 실시간으로 받아서
       자동으로 기기들을 제어하는 모드입니다.
-      매 시간 45분 또는 실시간 기상정보 Update 를 통해
-      각각의 기기를 자동으로 제어할 수 있습니다.
 ------------------------------------------------------''')
         print("")
         smart_mode()
-    if menu_num == '2':
+    if menu_num == 2:
         print("\n현재 인공지능 모드는 ", end="")
         if g_AI_Mode == True: print("작동 중 입니다.")
         else:
             print("중지 중 입니다.")
             print("")
         smart_mode()
-    if menu_num == '3':
-        ai_scheduler = threading.Thread(target=update_scheduler)
-        ai_scheduler.daemon = True
+    if menu_num == 3:
         g_AI_Mode = not g_AI_Mode
         print("\n현재 인공지능 모드가  ", end="")
         if g_AI_Mode == True :
             print("작동 중 입니다.")
             print("")
+            ai_scheduler = threading.Thread(target=update_scheduler)
+            ai_scheduler.daemon = True
             ai_scheduler.start()
-            pass
         else:
             while ai_scheduler.is_alive():
                 try:
@@ -427,11 +393,13 @@ def smart_mode():  # 스마트모드
                     pass
             print("정지 중 입니다.")
             print("")
-    elif menu_num == '4':
+        smart_mode()
+    elif menu_num == 4:
+        print("실시간으로 데이터를 받고, AI 모드를 작동합니다.")
         get_Realtime_Weather_Info()
         make_dust_Json()
         ai_device_control(read_Weather(), read_dust())
-    elif not menu_num: pass
+        print("메인 메뉴로 돌아갑니다.")
 
 ########### 네이버 url get ###########
 def get_request_url_naver(url):
@@ -855,14 +823,9 @@ def naver_rankup():
     url_search = "https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query="
     keywords = list[int(search_input)].text
     search_site = url_search + "%s" % str(keywords)
-    # key_encode =
-    new_screen = input("새 창으로 띄우시겠습니까? (Y/N) : ")
-    if new_screen == 'N':
-        print(url_search+"%s" % (str(keywords)))
-    else:
-        driver = webdriver.Chrome('C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe')
-        driver.implicitly_wait(1)
-        driver.get(search_site)
+    driver = webdriver.Chrome('C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe')
+    driver.implicitly_wait(1)
+    driver.get(search_site)
 
 ########### 유튜브 실시간 인기 동영상 ###########
 def youtube_rank():
@@ -954,10 +917,11 @@ def game():
 
 ########### 긴급서비스 검색(공공데이터 오픈api xml 이용) ###########
 def emergency():
-    global access_key
     # 아직 약국밖에 ㅠㅠ
     print("대구광역시 동구 신암동에 소재한 약국을 검색합니다.")
+
     class GetData:
+        access_key = "QEbF%2Bnfi5HCWciz2PTe%2FWlO%2F1by9CxB8jfRWiyq0IZm%2BrsVxcwMDX%2FkB%2Fb7alBc21fi9EwXCounWbKTu98MDdw%3D%3D"
         end_point = "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire"
         parameters = "?&serviceKey=" + access_key
         parameters += "&Q0=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C"
@@ -993,7 +957,7 @@ def emergency():
 def function_mode():
     global g_Television
 
-    print("여러 가지 기능을 실행합니다.")
+    print("\n여러 가지 기능을 실행합니다.")
 
     if g_Television == False:
         print("\n원활한 기능 실행을 위해 TV 를 작동시키겠습니까? (Y/N) : ", end="")
@@ -1008,7 +972,7 @@ def function_mode():
     print("\n7. 인스타그램 해쉬태그 검색\n8. 게임")
     print("0 ~ 5 번은 네이버 서비스를 기반으로 합니다.")
 
-    user_input = input(" \n원하시는 검색 종류의 번호를 선택하세요.(엔터시 메인메뉴로 이동) : ")
+    user_input = input(" \n원하시는 검색 종류의 번호를 선택하세요. : ")
     if user_input == '1':
         print("\n1. 실시간 뉴스\n2. 뉴스 검색")
         menu_news = input("번호를 선택하세요 : ")
@@ -1040,103 +1004,23 @@ def function_mode():
         instagram()
     elif user_input == '8':
         game()
-    elif not user_input: pass
 
-########### 시뮬레이션 입력값 json 파일 생성 ###########
-def simulator_make_json():
-    print("가상데이터로 기기들의 제어를 시작합니다.")
-    sim_baseDate = input("날짜를 입력하세요(YYYYMMDD) : ")
-    sim_baseTime = input("측정시간을 입력하세요(hhMM) : ")
-    sim_category_T1H = input("온도를 입력하세요 : ")
-    sim_category_RN1 = input("강수량을 입력하세요 : ")
-    sim_category_REH = input("습도를 입력하세요 : ")
-    sim_fcstTime = input("예측시간을 입력하세요 : ")
-    sim_nx = input("위도를 입력하세요 : ")
-    sim_ny = input("경도를 입력하세요 : ")
-    sim_khaiGrade = input("통합대기환경지수를 입력하세요 : ")
-    sim_stationName = input("동네 이름을 입력하세요 : ")
-    total_air_simul = []
-    total_dust_simul = []
-    value = []
-    value.append(sim_category_T1H)
-    value.append(sim_category_RN1)
-    value.append(sim_category_REH)
-    category_list = ["T1H", "RN1", "REH"]
-    simulation1 = OrderedDict()
-    simulation2 = OrderedDict()
-    simulation3 = OrderedDict()
-    simulation1["baseDate"] = int(sim_baseDate)
-    simulation1["baseTime"] = int(sim_baseTime)
-    simulation1["category"] = str(category_list[0])
-    simulation1["fcstTime"] = int(sim_fcstTime)
-    simulation1["fcstValue"] = int(sim_category_T1H)
-    simulation1["sim_nx"] = int(sim_nx)
-    simulation1["sim_ny"] = int(sim_ny)
-    simulation2["baseDate"] = int(sim_baseDate)
-    simulation2["baseTime"] = int(sim_baseTime)
-    simulation2["category"] = str(category_list[1])
-    simulation2["fcstTime"] = int(sim_fcstTime)
-    simulation2["fcstValue"] = int(sim_category_RN1)
-    simulation2["sim_nx"] = int(sim_nx)
-    simulation2["sim_ny"] = int(sim_ny)
-    simulation3["baseDate"] = int(sim_baseDate)
-    simulation3["baseTime"] = int(sim_baseTime)
-    simulation3["category"] = str(category_list[2])
-    simulation3["fcstTime"] = int(sim_fcstTime)
-    simulation3["fcstValue"] = int(sim_category_REH)
-    simulation3["nx"] = int(sim_nx)
-    simulation3["ny"] = int(sim_ny)
-    total_air_simul.append(simulation1)
-    total_air_simul.append(simulation2)
-    total_air_simul.append(simulation3)
 
-    with open('simul_air.json', 'w', encoding='utf-8') as outfile:
-        retJson = json.dumps(total_air_simul, indent=4, sort_keys=True, ensure_ascii=False)
-        outfile.write(retJson)
 
-    simulation4 = OrderedDict()
-    simulation4["dateTime"] = sim_baseDate + sim_baseTime
-    simulation4["khaiGrade"] = sim_khaiGrade
-    simulation4["stationName"] = sim_stationName
-    total_dust_simul.append(simulation4)
 
-    with open('simul_dust.json', 'w', encoding='utf-8') as outfile:
-        retJson = json.dumps(total_dust_simul, indent=4, sort_keys=True, ensure_ascii=False)
-        outfile.write(retJson)
 
-    simulation_air_csv = ["baseDate, baseTime, category, fcstTime, fcstValue, sim_nx, sim_ny"]
-    for count in range(len(category_list)):
-        simulation_air_csv.append(
-            sim_baseDate + ',' + sim_baseTime + ',' + category_list[count] + ',' + sim_fcstTime + ',' + value[
-                count] + ',' + sim_nx + ',' + sim_ny)
 
-    f = open('simul_air_csv.csv', 'w')
-    f.write('\n'.join(simulation_air_csv))
-    f.close()
 
-    simulation_dust_csv = ["stationName, dataTime, khaiGrade"]
-    simulation_dust_csv.append(sim_stationName+','+sim_baseDate+sim_baseTime+','+sim_khaiGrade)
 
-    f = open('simul_dust_csv.csv', 'w')
-    f.write('\n'.join(simulation_dust_csv))
-    f.close()
 
-########### 시뮬레이션 입력값 ai 함수에 넣기 ###########
-def read_simul():
-    air_simul = []
-    with open("simul_air.json", encoding='UTF8') as json_file:
-        json_object = json.load(json_file)
-        json_string = json.dumps(json_object)
-        air_simul = json.loads(json_string)
 
-    dust_simul = []
-    with open("simul_dust.json", encoding='UTF8') as json_file:
-        json_object = json.load(json_file)
-        json_string = json.dumps(json_object)
-        dust_simul = json.loads(json_string)
-    print("\n시뮬레이터를 시작합니다.")
-    ai_device_control(air_simul, dust_simul)
-    print("\n시뮬레이션을 종료합니다.")
+
+
+
+
+
+
+
 
 
 
@@ -1144,24 +1028,24 @@ def read_simul():
 print("< 스마트 홈 네트워크 시뮬레이션 프로그램 ver 1.0 >")
 print("                                   - 김상민 -")
 while True:
+
+
     print_main_menu()
-    menu_num = input("메뉴를 선택하세요 : ")
+    menu_num = int(input("메뉴를 선택하세요 : "))
     print("")
 
-    if menu_num == '1':
+    if menu_num == 1:
         check_device_status()
-    elif menu_num == '2':
+    elif menu_num == 2:
         control_device()
-    elif menu_num == '3':
+    elif menu_num == 3:
         smart_mode()
-    elif menu_num == '4':
+    elif menu_num == 4:
         function_mode()
-    elif menu_num == '5':
+    elif menu_num == 5:
         emergency()
-    elif menu_num == '7':
+    elif menu_num == 6:
         print("프로그램을 종료합니다.")
         break
-    elif menu_num == '6':
-        simulator_make_json()
-        read_simul()
-    elif not menu_num: pass
+
+

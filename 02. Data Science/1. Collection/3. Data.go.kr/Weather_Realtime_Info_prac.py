@@ -1,7 +1,7 @@
 import urllib.request
 import datetime
 import json
-import time
+import time, csv
 
 access_key="QEbF%2Bnfi5HCWciz2PTe%2FWlO%2F1by9CxB8jfRWiyq0IZm%2BrsVxcwMDX%2FkB%2Fb7alBc21fi9EwXCounWbKTu98MDdw%3D%3D"
 
@@ -38,18 +38,28 @@ def get_Weather_URL(day_time):  # (1) 기상정보(동네예보정보 조회 서
 def Make_Weather_Json(day_time):  # (1) 기상정보(동네예보정보 조회 서비스) json 파일 생성하는 함수
     jsonData = get_Weather_URL(day_time)
 
+    # if (jsonData['response']['header']['resultMsg'] == 'OK'):
+    #     for prn_data in jsonData['response']['body']['items']['item']:
+    #         json_weather_result.append({'baseDate':prn_data.get('baseDate'), 'baseTime':prn_data.get('baseTime'),
+    #                                     'category':prn_data.get('category'), 'fcstDate':prn_data.get('fcstDate'),
+    #                                     'fcstTime':prn_data.get('fcstTime'), 'fcstValue':prn_data.get('fcstValue'),
+    #                                     'nx':prn_data.get('nx'), 'ny':prn_data.get('ny')})
+    #
+    # with open('동구_신암동_초단기예보조회_%s%s.json' % (yyyymmdd, day_time), 'w', encoding='utf-8') as outfile:
+    #     retJson = json.dumps(json_weather_result, indent=4, sort_keys=True, ensure_ascii=False)
+    #     outfile.write(retJson)
+
+    data_for_csv = ['baseDate,baseTime,category,fcstDate,fcstTime,fcstValue,nx,ny']
     if (jsonData['response']['header']['resultMsg'] == 'OK'):
         for prn_data in jsonData['response']['body']['items']['item']:
-            json_weather_result.append({'baseDate':prn_data.get('baseDate'), 'baseTime':prn_data.get('baseTime'),
-                                        'category':prn_data.get('category'), 'fcstDate':prn_data.get('fcstDate'),
-                                        'fcstTime':prn_data.get('fcstTime'), 'fcstValue':prn_data.get('fcstValue'),
-                                        'nx':prn_data.get('nx'), 'ny':prn_data.get('ny')})
-
-    with open('동구_신암동_초단기예보조회_%s%s.json' % (yyyymmdd, day_time), 'w', encoding='utf-8') as outfile:
-        retJson = json.dumps(json_weather_result, indent=4, sort_keys=True, ensure_ascii=False)
-        outfile.write(retJson)
-
-    print('동구_신암동_초단기예보조회_%s_%s.json Saved\n' % (yyyymmdd, day_time))
+            data_for_csv.append(str(prn_data.get('baseDate'))+','+str(prn_data.get('baseTime'))+','+
+                                 str(prn_data.get('category'))+','+str(prn_data.get('fcstDate'))+','+
+                                 str(prn_data.get('fcstTime'))+','+str(prn_data.get('fcstValue'))+','+
+                                 str(prn_data.get('nx'))+','+str(prn_data.get('ny')))
+    print(data_for_csv)
+    f = open('동구_신암동_초단기예보조회_%s_%s.csv' % (yyyymmdd, day_time), 'w')
+    f.write('\n'.join(data_for_csv))
+    f.close()
 
 def get_Realtime_Weather_Info():  # (1) 기상 정보(동네예보정보 조회 서비스) json 파일 만들기 전, 실시간 업데이트 확인 함수
     day_min_int = int(day_min)
@@ -77,9 +87,6 @@ y_coodinate = "91"
 
 get_Realtime_Weather_Info()
 weather_info = []
-with open("동구_신암동_초단기예보조회_%s%s.json" % (yyyymmdd, day_time), encoding='UTF8') as json_file:
-    json_object = json.load(json_file)
-    json_string = json.dumps(json_object)
-    json_weather_info = json.loads(json_string)
+
 
 
