@@ -7,8 +7,8 @@ from collections import OrderedDict
 
 app_id="Hg0dhLPJ0jH4hWnGDKk6" # 본인 ID 입력 네이버
 app_pw="uv8hn6MlfZ" # 본인 Password 입력 네이버
-# access_key="QEbF%2Bnfi5HCWciz2PTe%2FWlO%2F1by9CxB8jfRWiyq0IZm%2BrsVxcwMDX%2FkB%2Fb7alBc21fi9EwXCounWbKTu98MDdw%3D%3D" # 공공데이터
-access_key="CYe%2BxZfEnJ0nHxomwRLowxGUT6fS623%2FB1j7%2B4AX7RZ0Itz5OoAWiKyLojAjyDrakdRp3%2BanNahGbu6aLEZYVg%3D%3D" # 공공데이터
+access_key="QEbF%2Bnfi5HCWciz2PTe%2FWlO%2F1by9CxB8jfRWiyq0IZm%2BrsVxcwMDX%2FkB%2Fb7alBc21fi9EwXCounWbKTu98MDdw%3D%3D" # 공공데이터
+# access_key="CYe%2BxZfEnJ0nHxomwRLowxGUT6fS623%2FB1j7%2B4AX7RZ0Itz5OoAWiKyLojAjyDrakdRp3%2BanNahGbu6aLEZYVg%3D%3D" # 공공데이터
 # access_key="GMAg38HVaGoDNnGL4DtAbKle1ggqtxQU8366X1IcaPrrCH08aZkSrMf9I%2BPIXTRFpofW%2Btu%2BdkstNSL0JZTh%2BA%3D%3D"
 json_weather_result=[]
 yyyymmdd = time.strftime("%Y%m%d")
@@ -357,31 +357,6 @@ def update_scheduler():
             if g_Television == False: g_Television = not g_Television
             else: continue
             morning_alram(read_Weather())
-
-########## 환기 ###########
-# def ventil(weather_info, dust_info):
-#     global g_Balcony_Windows
-#     for rain_element in range(len(read_Weather())):
-#         if weather_info[rain_element]["category"] == "RN1":
-#             rain = weather_info[rain_element]["fcstValue"]
-#             break
-#     for dust_element in range(len(read_dust())):
-#         if dust_info[dust_element]["stationName"] == "신암동":
-#             air_pollution = dust_info[dust_element]["khaiGrade"]
-#     while True:
-#         if g_AI_Mode == False:
-#             continue
-#         elif int(rain) > 0:
-#             continue
-#         elif int(air_pollution) >= 4:
-#             continue
-#         else:
-#             if g_Balcony_Windows == True:
-#                 g_Balcony_Windows = not g_Balcony_Windows
-#                 time.sleep(5)
-#             elif g_Balcony_Windows == False:
-#                 g_Balcony_Windows = not g_Balcony_Windows
-#                 time.sleep(5)
 
 ########### 스마트모드 ###########
 def smart_mode():  # 스마트모드
