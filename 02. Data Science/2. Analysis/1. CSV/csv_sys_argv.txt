@@ -1,0 +1,53 @@
+supplier_data.csv output_files/output.csv
+
+supplier_data.csv output_files/1output_basic.csv
+supplier_data.csv output_files/1output_pandas.csv
+
+supplier_data.csv output_files/2output_csv.csv
+
+supplier_data.csv output_files/3output_basic.csv
+supplier_data.csv output_files/3output_pandas.csv
+
+supplier_data.csv output_files/4output_basic.csv
+supplier_data.csv output_files/4output_pandas.csv
+
+supplier_data.csv output_files/5output_basic.csv
+supplier_data.csv output_files/5output_pandas.csv
+
+supplier_data.csv output_files/6output_basic.csv
+supplier_data.csv output_files/6output_pandas.csv
+
+supplier_data.csv output_files/7output_basic.csv
+supplier_data.csv output_files/7output_pandas.csv
+
+supplier_data_unnecessary_header_footer.csv output_files/11output_basic.csv
+supplier_data_unnecessary_header_footer.csv output_files/11output_pandas.csv
+
+supplier_data_no_header_row.csv output_files/12output_basic.csv
+supplier_data_no_header_row.csv output_files/12output_pandas.csv
+
+# 8csv_reader_counts_for_multiple_files.py
+bigdata_repository
+
+# 9csv_reader_concat_rows_from_multiple_files.py
+bigdata_repository output_files/9output_basic.csv
+bigdata_repository output_files/9output_pandas.csv
+
+
+bigdata_repository output_files/10output_basic.csv
+bigdata_repository output_files/10output_pandas.csv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
