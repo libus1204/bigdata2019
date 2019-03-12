@@ -1,0 +1,9 @@
+Student_ID,Name,Sex,Age,Major,Languages,High_level,Middle_level,Low_level
+ITT001,영호,남,45,경영학,,,,
+ITT002,민선,여,25,컴퓨터 공학,C Java C++,,C,Java C++
+ITT003,상민,남,30,전자 공학,C C++,,,C C++
+ITT004,세중,남,30,정치외교,,,,
+ITT005,규동,남,29,천문우주과학,Java Ruby,,Java,Ruby,
+ITT006,치우,남,30,신문방송학,,,,
+ITT007,현기,남,28,통계빅데이터,sas R,,sas,R
+ITT008,정헌,남,30,전자 공학,C Verilog,,C,Verilog
