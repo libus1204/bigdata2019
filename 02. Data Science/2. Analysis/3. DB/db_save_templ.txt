@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS Student_Language
+                          (Student_ID VARCHAR(15),
+                          Name VARCHAR(10),
+                          Level VARCHAR(5),
+                          Period VARCHAR(10)                          
+						  
+						  
+						  
+						  
+						  
+						  
+                          Major VARCHAR(10),
+                          Language VARCHAR(10),
+                          High_level VARCHAR(10),
+                          Middle_level VARCHAR(10),
+                          Low_level VARCHAR(10));
