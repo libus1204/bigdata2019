@@ -19,8 +19,8 @@ def main_menu():
         menu_3_main()
     elif user_input == 4:
         menu_4()
-    # elif user_input == 5:
-    #     menu_5()
+    elif user_input == 5:
+        menu_5()
 
 def name_and_age(age_list):
     print("[", end=" ")
@@ -309,10 +309,18 @@ def menu_4():
                 else:
                     print(" > %s (Level : 하)" % rows[count][8])
 
-
-
-
-
+def menu_5():
+    print("삭제할 ID를 입력하세요 : ",end="")
+    user_delete = input("")
+    c.execute("SELECT * FROM Student")
+    rows = c.fetchall()
+    c.execute("delete from student where student_id='%s'" % user_delete)
+    print("삭제되었습니다.")
+    # for row in rows:
+    #     row_list_output = []
+    #     for column_index in range(len(row)):
+    #         row_list_output.append(str(row[column_index]))
+    # print(row_list_output)
 
 
 

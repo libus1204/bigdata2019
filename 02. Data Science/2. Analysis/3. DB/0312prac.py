@@ -58,20 +58,20 @@ row_list_output = []
 for row in rows:
     for column_index in range(len(row)):
         row_list_output.append(str(row[column_index]))
-print(len(rows[1][5]))
+# print(len(rows[1][5]))
 c.execute("select * from student")
 rows = c.fetchall()
-print("수정할 학생의 ID를 입력하세요 : ",end='')
+print("수정할 학생의 ID를 입력하세요 : ", end='')
 update_id = input("")
 for count in range(len(rows)):
     if str(rows[count][0]) == update_id:
         print("\n1. 이름 : %s" % rows[count][1])
         print("2. 성별 : %s" % rows[count][2])
-        print("3. 나이 : %s:" % rows[count][3])
-        print(" - 전공 : %s" % rows[count][4])
+        print("3. 나이 : %s" % rows[count][3])
+        print("4. 전공 : %s" % rows[count][4])
         print("사용 가능한 언어")
         if not rows[count][5]:
-            print("  없음")
+            print(" - 없음")
         else:
             if " " in rows[count][6]:
                 rows[count][6].split(' ')
@@ -97,6 +97,34 @@ for count in range(len(rows)):
                 pass
             else:
                 print(" > %s (Level : 하)" % rows[count][8])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
