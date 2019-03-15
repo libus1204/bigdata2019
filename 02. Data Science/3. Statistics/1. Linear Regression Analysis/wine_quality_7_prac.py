@@ -289,11 +289,202 @@ for count in range(len(y_predicted_rounded)):
 #         correct.append(a)
 #     print(correct.count(0)/len(correct)*100)
 
+# def combination(arr, r):
+#     arr = sorted(arr)
+#     def generate(chosen):
+#         if len(chosen) == r:
+#             my_formula = 'quality ~ '+ chosen[0] +'+'+ chosen[1]+'+' + chosen[2]
+#             lm = ols(my_formula, data=wine).fit()
+#             dependent_variable = wine['quality']
+#             independent_variables = wine[wine.columns.difference(['quality', 'type', 'in_sample'])]
+#             new_observations = wine.ix[wine.index.isin(range(6497)), independent_variables.columns]
+#             y_predicted = lm.predict(new_observations)
+#             y_predicted_rounded = [round(score) for score in y_predicted]
+#             correct = []
+#             correct_max=[]
+#             for count in range(len(y_predicted_rounded)):
+#                 a = int(wine['quality'][count]) - int(y_predicted_rounded[count])
+#                 correct.append(a)
+#             print(chosen)
+            # correct_max.append(correct.count(0) / len(correct) * 100)
+            # print(max(correct_max))
+            # return
+        # start = arr.index(chosen[-1]) + 1 if chosen else 0
+        # for nxt in range(start, len(arr)):
+        #     chosen.append(arr[nxt])
+        #     generate(chosen)
+        #     chosen.pop()
+    # generate([])
+#
+# combination(['alcohol', 'chlorides', 'citric_acid', 'density', 'fixed_acidity', 'free_sulfur_dioxide', 'pH',
+#                  'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 3)
+
+# def combination(arr, r):
+#     arr = sorted(arr)
+#     correct_max = []
+#     def generate(chosen):
+#         if len(chosen) == r:
+#             my_formula = 'quality ~ '+ chosen[0] +'+'+ chosen[1]+'+' + chosen[2] + '+' + chosen[3]
+#             lm = ols(my_formula, data=wine).fit()
+#             dependent_variable = wine['quality']
+#             independent_variables = wine[wine.columns.difference(['quality', 'type', 'in_sample'])]
+#             new_observations = wine.ix[wine.index.isin(range(6497)), independent_variables.columns]
+#             y_predicted = lm.predict(new_observations)
+#             y_predicted_rounded = [round(score) for score in y_predicted]
+#             correct = []
+#
+#             for count in range(len(y_predicted_rounded)):
+#                 a = int(wine['quality'][count]) - int(y_predicted_rounded[count])
+#                 correct.append(a)
+#             print(chosen)
+            # correct_max.append(correct.count(0) / len(correct) * 100)
+            # print(max(correct_max))
+        #
+        # start = arr.index(chosen[-1]) + 1 if chosen else 0
+        # for nxt in range(start, len(arr)):
+        #     chosen.append(arr[nxt])
+        #     generate(chosen)
+        #     chosen.pop()
+    # generate([])
+#
+# combination(['alcohol', 'chlorides', 'citric_acid', 'density', 'fixed_acidity', 'free_sulfur_dioxide', 'pH',
+#                  'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 4)
+
+# def combination(arr, r):
+#     arr = sorted(arr)
+#     correct_max = []
+#     def generate(chosen):
+#         if len(chosen) == r:
+#             my_formula = 'quality ~ '+ chosen[0] +'+'+ chosen[1]+'+' + chosen[2] + '+' + chosen[3] + '+' + \
+#                 chosen[4]
+#             lm = ols(my_formula, data=wine).fit()
+#             dependent_variable = wine['quality']
+#             independent_variables = wine[wine.columns.difference(['quality', 'type', 'in_sample'])]
+#             new_observations = wine.ix[wine.index.isin(range(6497)), independent_variables.columns]
+#             y_predicted = lm.predict(new_observations)
+#             y_predicted_rounded = [round(score) for score in y_predicted]
+#             correct = []
+#
+#             for count in range(len(y_predicted_rounded)):
+#                 a = int(wine['quality'][count]) - int(y_predicted_rounded[count])
+#                 correct.append(a)
+            # print(chosen)
+            # correct_max.append(correct.count(0) / len(correct) * 100)
+            # print(max(correct_max))
+        #
+        # start = arr.index(chosen[-1]) + 1 if chosen else 0
+        # for nxt in range(start, len(arr)):
+        #     chosen.append(arr[nxt])
+        #     generate(chosen)
+        #     chosen.pop()
+    # generate([])
+#
+# combination(['alcohol', 'chlorides', 'citric_acid', 'density', 'fixed_acidity', 'free_sulfur_dioxide', 'pH',
+#                  'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 5)
+#
+# def combination(arr, r):
+#     arr = sorted(arr)
+#     correct_max = []
+#     def generate(chosen):
+#         if len(chosen) == r:
+#             my_formula = 'quality ~ '+ chosen[0] +'+'+ chosen[1]+'+' + chosen[2] + '+' + chosen[3] + '+' + \
+#                 chosen[4] + '+' + chosen[5]
+#             lm = ols(my_formula, data=wine).fit()
+#             dependent_variable = wine['quality']
+#             independent_variables = wine[wine.columns.difference(['quality', 'type', 'in_sample'])]
+#             new_observations = wine.ix[wine.index.isin(range(6497)), independent_variables.columns]
+#             y_predicted = lm.predict(new_observations)
+#             y_predicted_rounded = [round(score) for score in y_predicted]
+#             correct = []
+#
+#             for count in range(len(y_predicted_rounded)):
+#                 a = int(wine['quality'][count]) - int(y_predicted_rounded[count])
+#                 correct.append(a)
+#             print(chosen)
+#             correct_max.append(correct.count(0) / len(correct) * 100)
+#             print(max(correct_max))
+#
+#         start = arr.index(chosen[-1]) + 1 if chosen else 0
+#         for nxt in range(start, len(arr)):
+#             chosen.append(arr[nxt])
+#             generate(chosen)
+#             chosen.pop()
+#     generate([])
+#
+# combination(['alcohol', 'chlorides', 'citric_acid', 'density', 'fixed_acidity', 'free_sulfur_dioxide', 'pH',
+#                  'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 6)
+
+# def combination(arr, r): # 53.82%
+#     arr = sorted(arr)
+#     correct_max = []
+#     def generate(chosen):
+#         if len(chosen) == r:
+#             my_formula = 'quality ~ ' + chosen[0] + '+' + chosen[1]+'+' + chosen[2] + '+' + chosen[3] + '+' + \
+#                 chosen[4] + '+' + chosen[5] + '+' + chosen[6]
+#             lm = ols(my_formula, data=wine).fit()
+#             dependent_variable = wine['quality']
+#             independent_variables = wine[wine.columns.difference(['quality', 'type', 'in_sample'])]
+#             new_observations = wine.ix[wine.index.isin(range(6497)), independent_variables.columns]
+#             y_predicted = lm.predict(new_observations)
+#             y_predicted_rounded = [round(score) for score in y_predicted]
+#             correct = []
+#
+#             for count in range(len(y_predicted_rounded)):
+#                 a = int(wine['quality'][count]) - int(y_predicted_rounded[count])
+#                 correct.append(a)
+#             print(chosen)
+            # correct_max.append(correct.count(0) / len(correct) * 100)
+            # print(max(correct_max))
+        #
+        # start = arr.index(chosen[-1]) + 1 if chosen else 0
+        # for nxt in range(start, len(arr)):
+        #     chosen.append(arr[nxt])
+        #     generate(chosen)
+        #     chosen.pop()
+    # generate([])
+#
+# combination(['alcohol', 'chlorides', 'citric_acid', 'density', 'fixed_acidity', 'free_sulfur_dioxide', 'pH',
+#                  'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 7)
+#
+
+# def combination(arr, r):
+#     arr = sorted(arr)
+#     correct_max = []
+#     def generate(chosen):
+#         if len(chosen) == r:
+#             my_formula = 'quality ~ ' + chosen[0] + '+' + chosen[1]+'+' + chosen[2] + '+' + chosen[3] + '+' + \
+#                 chosen[4] + '+' + chosen[5] + '+' + chosen[6] + '+' + chosen[7]
+#             lm = ols(my_formula, data=wine).fit()
+#             dependent_variable = wine['quality']
+#             independent_variables = wine[wine.columns.difference(['quality', 'type', 'in_sample'])]
+#             new_observations = wine.ix[wine.index.isin(range(6497)), independent_variables.columns]
+#             y_predicted = lm.predict(new_observations)
+#             y_predicted_rounded = [round(score) for score in y_predicted]
+#             correct = []
+#
+#             for count in range(len(y_predicted_rounded)):
+#                 a = int(wine['quality'][count]) - int(y_predicted_rounded[count])
+#                 correct.append(a)
+#             correct_max.append(correct.count(0) / len(correct) * 100)
+#             print(max(correct_max))
+#
+#         start = arr.index(chosen[-1]) + 1 if chosen else 0
+#         for nxt in range(start, len(arr)):
+#             chosen.append(arr[nxt])
+#             generate(chosen)
+#             chosen.pop()
+#     generate([])
+#
+# combination(['alcohol', 'chlorides', 'citric_acid', 'density', 'fixed_acidity', 'free_sulfur_dioxide', 'pH',
+#                  'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 8)
+
 def combination(arr, r):
     arr = sorted(arr)
+    correct_max = []
     def generate(chosen):
         if len(chosen) == r:
-            my_formula = 'quality ~ '+ chosen[0] +'+'+ chosen[1]+'+' + chosen[2]
+            my_formula = 'quality ~ ' + chosen[0] + '+' + chosen[1]+'+' + chosen[2] + '+' + chosen[3] + '+' + \
+                chosen[4] + '+' + chosen[5] + '+' + chosen[6] + '+' + chosen[7] + '+' + chosen[8] + '+' + chosen[9]
             lm = ols(my_formula, data=wine).fit()
             dependent_variable = wine['quality']
             independent_variables = wine[wine.columns.difference(['quality', 'type', 'in_sample'])]
@@ -301,14 +492,13 @@ def combination(arr, r):
             y_predicted = lm.predict(new_observations)
             y_predicted_rounded = [round(score) for score in y_predicted]
             correct = []
-            correct_max=[]
+
             for count in range(len(y_predicted_rounded)):
                 a = int(wine['quality'][count]) - int(y_predicted_rounded[count])
                 correct.append(a)
-            # print(chosen)
             correct_max.append(correct.count(0) / len(correct) * 100)
             print(max(correct_max))
-            return
+
         start = arr.index(chosen[-1]) + 1 if chosen else 0
         for nxt in range(start, len(arr)):
             chosen.append(arr[nxt])
@@ -317,4 +507,4 @@ def combination(arr, r):
     generate([])
 
 combination(['alcohol', 'chlorides', 'citric_acid', 'density', 'fixed_acidity', 'free_sulfur_dioxide', 'pH',
-                 'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 3)
+                 'residual_sugar', 'sulphates', 'total_sulfur_dioxide', 'volatile_acidity'], 11)
