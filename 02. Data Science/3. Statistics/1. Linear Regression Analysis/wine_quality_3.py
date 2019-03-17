@@ -22,7 +22,7 @@ wine['in_sample'] = np.where(wine.index.isin(wine_sample.index), 1., 0.)
 
 print("\nprint : wine['in_sample']")
 print(wine['in_sample'])
-print("\nprint : pd.crosstab(wine.in_sample, wine.type, margins=True")
+print("\nprint : pd.crosstab(wine.in_sample, wine.type, margins=True)")
 print(pd.crosstab(wine.in_sample, wine.type, margins=True))
 
 
