@@ -22,9 +22,12 @@ independent_variables_list = ['account_length', 'vmail_message', 'day_mins', 'da
                               'day_charge', 'eve_mins', 'eve_calls', 'eve_charge', 'night_mins', 'night_calls',
                               'night_charge', 'intl_mins', 'intl_calls', 'intl_charge', 'custserv_calls']
 correct_per_max = 0
+count2 = 0
 for num in range(1,16):
     combi_list = list(combinations(independent_variables_list, num))
     for tup in combi_list:
+        # print(count2)
+        count2 += 1
         independent_variables = churn[list(tup)]
         independent_variables_with_constant = sm.add_constant(independent_variables, prepend=True)
         logit_model = sm.Logit(dependent_variable, independent_variables_with_constant).fit()
@@ -38,6 +41,7 @@ for num in range(1,16):
                 logistic_predicted_value_list.append(False)
             else:
                 logistic_predicted_value_list.append(True)
+        print(count2)
         correct = 0
         for count in range(3333):
             if str(logistic_predicted_value_list[count]) == str(churn['churn'][count][0:-1]):
@@ -45,4 +49,6 @@ for num in range(1,16):
                 a = (correct / 3333) * 100
                 if correct_per_max < a:
                     correct_per_max = a
+                # print(correct_per_max)
+
 print(correct_per_max)
