@@ -19,7 +19,7 @@ clf.fit(house_data, house_label)
 pre = clf.predict(house_data)
 ac_score = metrics.accuracy_score(house_label, pre)
 print("정답률 : ", ac_score*100)
-
+# zzzz
 match_dic = {}
 
 
