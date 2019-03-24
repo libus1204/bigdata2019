@@ -77,17 +77,73 @@
 # predict = kmeans.predict(data)
 # print(predict)
 # print("정답률 : %s %%" % (metrics.accuracy_score(label, predict)*100))
+# import pandas as pd
+# from sklearn import metrics
+# import sklearn.preprocessing, sklearn.cluster
+# alcohol = pd.read_csv("niaaa-report2009.csv", index_col="State")
+# columns = ["Wine", "Beer"]
+# kmeans = sklearn.cluster.KMeans(n_clusters=9)
+# kmeans.fit(alcohol[columns])
+# alcohol["Clusters"] = kmeans.labels_
+# alcohol.to_csv("Clustering_result.csv", index=False)
+# data=alcohol[columns]
+# label=alcohol["Clusters"]
+# predict = kmeans.predict(data)
+# print(predict)
+# print("정답률 : %s %%" % (metrics.accuracy_score(label, predict)*100))
+# import pandas as pd
+# from sklearn import metrics
+# import sklearn.preprocessing, sklearn.cluster
+# alcohol = pd.read_csv('niaaa-report2009.csv', index_col='State')
+# columns = ['Wine', 'Beer']
+# kmeans = sklearn.cluster.KMeans(n_clusters=9)
+# kmeans.fit(alcohol[columns])
+# alcohol["Clusters"] = kmeans.labels_
+# alcohol.to_csv("clustering_result.csv", index = False)
+# data = alcohol[columns]
+# label = alcohol['Clusters']
+# predict = kmeans.predict(data)
+# print(predict)
+# print("정답률 : %s %%" % (metrics.accuracy_score(label, predict)*100))
+# import pandas as pd
+# from sklearn import metrics
+# import sklearn.preprocessing, sklearn.cluster
+# alcohol = pd.read_csv("niaaa-report2009.csv", index_col="State")
+# columns = ['Wine', 'Beer']
+# kmeans = sklearn.cluster.KMeans(n_clusters=9)
+# kmeans.fit(alcohol[columns])
+# alcohol['Clusters'] = kmeans.labels_
+# alcohol.to_csv('clustering_result.csv', index=False)
+# data = alcohol[columns]
+# label = alcohol['Clusters']
+# predict = kmeans.predict(data)
+# print(predict)
+# print("정답률 : %s %%" % (metrics.accuracy_score(label, predict)*100))
+# import pandas as pd
+# from sklearn import metrics
+# import sklearn.preprocessing, sklearn.cluster
+# alcohol = pd.read_csv('niaaa-report2009.csv', index_col = "State")
+# columns = ['Wine', 'Beer']
+# kmeans = sklearn.cluster.KMeans(n_clusters=9)
+# kmeans.fit(alcohol[columns])
+# alcohol['Clusters'] = kmeans.labels_
+# alcohol.to_csv('Clustering_result.csv', index=False)
+# data = alcohol[columns]
+# label = alcohol['Clusters']
+# predict = kmeans.predict(data)
+# print(predict)
+# print("정답률 : %s %%" % (metrics.accuracy_score(label, predict)*100))
 import pandas as pd
 from sklearn import metrics
-import sklearn.preprocessing, sklearn.cluster
-alcohol = pd.read_csv("niaaa-report2009.csv", index_col="State")
-columns = ["Wine", "Beer"]
+import sklearn.cluster, sklearn.preprocessing
+alcohol = pd.read_csv('niaaa-report2009.csv', index_col="State")
+columns = ['Wine', 'Beer']
 kmeans = sklearn.cluster.KMeans(n_clusters=9)
 kmeans.fit(alcohol[columns])
-alcohol["Clusters"] = kmeans.labels_
-alcohol.to_csv("Clustering_result.csv", index=False)
-data=alcohol[columns]
-label=alcohol["Clusters"]
+alcohol['Clusters'] = kmeans.labels_
+alcohol.to_csv('clustering_result.csv', index=False)
+data = alcohol[columns]
+label = alcohol['Clusters']
 predict = kmeans.predict(data)
 print(predict)
-print("정답률 : %s %%" % (metrics.accuracy_score(label, predict)*100))
+print(metrics.accuracy_score(label, predict))

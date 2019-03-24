@@ -68,16 +68,94 @@
 # cl_report = metrics.classification_report(label_test, predict)
 # print(ac_score)
 # print(cl_report)
+# import pandas as pd
+# from sklearn import svm, metrics
+# from sklearn.model_selection import  train_test_split
+# test = pd.read_csv("bmi.csv")
+# label = test["label"]
+# weight = test["weight"] / 100
+# height = test["height"] / 200
+# w_h = pd.concat([weight, height], axis=1)
+# data_train, data_test, label_train, label_test = train_test_split(w_h, label)
+# clf = svm.SVC(gamma="auto")
+# clf.fit(data_train, label_train)
+# predict = clf.predict(data_test)
+# ac = metrics.accuracy_score(label_test, predict)
+# cl = metrics.classification_report(label_test, predict)
+# print(ac)
+# print(cl)
+# import pandas as pd
+# from sklearn import metrics, svm
+# from sklearn.model_selection import train_test_split
+# test = pd.read_csv('bmi.csv')
+# label = test['label']
+# weight = test['weight'] / 100
+# height = test['height'] / 200
+# w_h = pd.concat([weight, height], axis=1)
+# data_train, data_test, label_train, label_test = train_test_split(w_h, label)
+# clf = svm.SVC(gamma="auto")
+# clf.fit(data_train, label_train)
+# predict = clf.predict(data_test)
+# ac = metrics.accuracy_score(label_test, predict)
+# cl = metrics.classification_report(label_test, predict)
+# print(ac)
+# print(cl)
+# import pandas as pd
+# from sklearn import svm, metrics
+# from sklearn.model_selection import train_test_split
+# test = pd.read_csv('bmi.csv')
+# label = test['label']
+# weight = test['weight'] / 100
+# height = test['height'] / 200
+# w_h = pd.concat([weight, height], axis=1)
+# data_train, data_test, label_train, label_test = train_test_split(w_h, label)
+# clf = svm.SVC(gamma='auto')
+# clf.fit(data_train, label_train)
+# predict = clf.predict(data_test)
+# ac = metrics.accuracy_score(label_test, predict)
+# cl = metrics.classification_report(label_test, predict)
+# print(ac)
+# print(cl)
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
+# from sklearn import svm, metrics
+# test = pd.read_csv('bmi.csv')
+# label = test['label']
+# weight = test['weight'] / 100
+# height = test['height'] / 200
+# w_h = pd.concat([weight, height], axis=1)
+# data_train, data_test, label_train, label_test = train_test_split(w_h, label)
+# clf = svm.SVC(gamma='auto')
+# clf.fit(data_train, label_train)
+# predict = clf.predict(data_test)
+# ac = metrics.accuracy_score(label_test, predict)
+# cl = metrics.classification_report(label_test, predict)
+# print(ac)
+# print(cl)
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
+# from sklearn import svm, metrics
+# test = pd.read_csv('bmi.csv')
+# label = test['label']
+# weight = test['weight'] / 100
+# height = test['height'] / 200
+# w_h = pd.concat([weight, height], axis=1)
+# data_train, data_test, label_train, label_test = train_test_split(w_h, label)
+# clf = svm.SVC(gamma='auto')
+# clf.fit(data_train, label_train)
+# predict = clf.predict(data_test)
+# ac = metrics.accuracy_score(label_test, predict)
+# cl = metrics.classification_report(label_test, predict)
 import pandas as pd
+from sklearn.model_selection import train_test_split
 from sklearn import svm, metrics
-from sklearn.model_selection import  train_test_split
-test = pd.read_csv("bmi.csv")
-label = test["label"]
-weight = test["weight"] / 100
-height = test["height"] / 200
+test = pd.read_csv('bmi.csv')
+label = test['label']
+weight = test['weight'] / 100
+height = test['height'] / 200
 w_h = pd.concat([weight, height], axis=1)
 data_train, data_test, label_train, label_test = train_test_split(w_h, label)
-clf = svm.SVC(gamma="auto")
+clf = svm.SVC(gamma='auto')
 clf.fit(data_train, label_train)
 predict = clf.predict(data_test)
 ac = metrics.accuracy_score(label_test, predict)

@@ -103,20 +103,71 @@
 #     fp.write("{0},{1},{2}\r\n".format(h,w,l))
 # fp.close()
 # print("ok", random_data)
+# import random
+# def cal(h,w):
+#     b = w / (h/100) ** 2
+#     if b < 18.5: return "thin"
+#     if b < 25: return "normal"
+#     return "fat"
+# fp = open("bmi.csv", "w", encoding="utf-8")
+# fp.write("height,weight,label\r\n")
+# random_data = {"thin":0, "normal":0, "fat":0}
+# for data in range(30000):
+#     h = random.randint(120, 200)
+#     w = random.randint(35, 85)
+#     l = cal(h,w)
+#     random_data[l] += 1
+#     fp.write("{0},{1},{2}\r\n".format(h,w,l))
+# fp.close()
+# print("ok", random_data)
+# import random
+# def cal(h,w):
+#     b = w / (h/100) ** 2
+#     if b < 18.5: return "thin"
+#     if b < 25: return "normal"
+#     return "fat"
+# fp = open("bmi.csv", "w", encoding="utf-8")
+# fp.write("height,weight,label\r\n")
+# random_data = {"thin":0, "normal":0, "fat":0}
+# for data in range(30000):
+#     h = random.randint(120, 200)
+#     w = random.randint(35, 85)
+#     l = cal(h, w)
+#     random_data[l] += 1
+#     fp.write("{0},{1},{2}\r\n".format(h,w,l))
+# fp.close()
+# print("ok", random_data)
+# import random
+# def cal(h,w):
+#     b = w / (h/100) ** 2
+#     if b < 18.5: return "thin"
+#     if b < 25: return "normal"
+#     return "fat"
+# fp=open('bmi.csv', 'w', encoding='utf-8')
+# fp.write('height,weight,label\r\n')
+# random_data = {"thin":0, "normal":0, "fat":0}
+# for data in range(30000):
+#     h = random.randint(120, 200)
+#     w = random.randint(35, 85)
+#     l = cal(h, w)
+#     random_data[l] += 1
+#     fp.write("{0},{1},{2}\r\n".format(h, w, l))
+# fp.close()
+# print("ok", random_data)
 import random
-def cal(h,w):
+def cal(h, w):
     b = w / (h/100) ** 2
     if b < 18.5: return "thin"
     if b < 25: return "normal"
     return "fat"
-fp = open("bmi.csv", "w", encoding="utf-8")
-fp.write("height,weight,label\r\n")
+fp = open('bmi.csv', 'w', encoding='utf-8')
+fp.write('height,weight,label\r\n')
 random_data = {"thin":0, "normal":0, "fat":0}
 for data in range(30000):
     h = random.randint(120, 200)
     w = random.randint(35, 85)
-    l = cal(h,w)
+    l = cal(h, w)
     random_data[l] += 1
-    fp.write("{0},{1},{2}\r\n".format(h,w,l))
+    fp.write("{0},{1},{2}\r\n".format(h, w, l))
 fp.close()
 print("ok", random_data)
