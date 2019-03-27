@@ -1,20 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <student_list>
-	<student ID="ITT002" name="윤민선" sex="여">
-		<age>25</age>
-		<major>컴퓨터 공학</major>
-		<practicable_computer_languages>
-			<language level="중" name="C">
-				<period value="1년" />
-			</language>
-			<language level="상" name="Java">
-				<period value="1년" />
-			</language>
-			<language level="하" name="C++">
-				<period value="6개월" />
-			</language>
-		</practicable_computer_languages>
-	</student>
 	<student ID="ITT003" name="김상민" sex="남">
 		<age>30</age>
 		<major>전자 공학</major>
@@ -73,4 +58,4 @@
 			</language>
 		</practicable_computer_languages>
 	</student>
-<student ID="ITT009" name="asdfjio" sex="여"><age>30</age><major>fghdio</major><practicable_computer_languages /></student></student_list>
+</student_list>

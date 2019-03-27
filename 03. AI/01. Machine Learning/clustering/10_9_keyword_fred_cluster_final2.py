@@ -127,17 +127,28 @@ print('# of users:', len(user_product_dic))
 print('# of products:', len(product_user_dic))
 
 # 각 사용자들이 구매한 상품 가짓수로 기초 통계량을 출력
+
 print(stats.describe(product_per_user_li))
+#################### 평균 58.69, 최대 상품 1603 상품 개를 사고, 최소 상품 한가지를 삼
+
 # 구매한 상품의 가짓수가 1인 사용자의 사용자 ID를 검색
 min_product_user_li=[k for k,v in user_product_dic.items() if len(v)==1]
 # 마찬가지로, 구매한 상품의 가짓수가 600개 이상인 사용자의 사용자 ID를 검색
 max_product_user_li=[k for k,v in user_product_dic.items() if len(v)>=600]
 print("# of users purchased one product:%d"%(len(min_product_user_li)))
 print("# of users purchased more than 600 product:%d"%(len(max_product_user_li)))
+
+#################### 상품 가짓수가 600개 이상이면 구매 사용자 수가 거의 0에 수렴. 즉, 일반 사용자 연간 구매하는 고유 상품의 가짓수는
+#################### 1~600개 사이라는 뜻. 1년간 600개 또는 1개 구매하는 사용자는 예외 상황 취급. 군집화의 노이즈가 될 수 있으므로
+
+
 # 찾아낸 사용자를 군집화에 사용 할 user_product_dic 에서 제외
 user_product_dic={k:v for k,v in user_product_dic.items() if len(v)>1 and len(v)<600}
 print("# of left user:%d"%(len(user_product_dic)))
-# 남아 있는 사용자가 구매한 상품에도 0에서 시작하는 고유 ID를 부여
+
+#################### 상품 가짓수가 2~600개인 사용자만 골라내서 딕셔너리를 재정의, 그 후 남아있는 사용자가 구매한 상품에 ID 부여
+# 한 가지 상품을 구매한 사용자는 95, 600개 이상은 7명 총 102명 사용자와 이들이 구매한 20개 상품을 없앰
+
 # 데이터셋에서 제외된 사용자가 구매한 상품은 군집화에서 사용하지 않기 때문에 이러한 처리
 id_product_dic={}
 for product_set_li in user_product_dic.values():
@@ -148,6 +159,9 @@ for product_set_li in user_product_dic.values():
             id_product_dic.setdefault(x,len(id_product_dic))
 print("# of left items:%d"%(len(id_product_dic)))
 
+
+#################### 전 단계에서 생성한 사용자 ID 와 사용자 ID 가 구입한 상품 ID를 사용자 ID 수 만큼의 행과
+#################### 상품 ID 수만큼의 열을 가지는 2차원 리스트로 변환
 id_user_dic = {}
 # 군집화의 입력으로 사용할 리스트
 user_product_vec_li=[]

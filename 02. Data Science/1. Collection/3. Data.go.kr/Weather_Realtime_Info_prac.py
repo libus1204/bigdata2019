@@ -15,7 +15,7 @@ def get_Request_URL(url):  # (1) 기상 정보(동네예보정보 조회 서비�
             return response.read().decode('utf-8')
     except Exception as e:
         print(e)
-        print("[%s] Error for URL : %s" %(datetime.datetime.now(), url))
+        print("[%s] Error for URL : %s" % (datetime.datetime.now(), url))
         return None
 
 def get_Weather_URL(day_time):  # (1) 기상정보(동네예보정보 조회 서비스) request 보내기 전, url 만드는 함수
@@ -37,18 +37,6 @@ def get_Weather_URL(day_time):  # (1) 기상정보(동네예보정보 조회 서
 
 def Make_Weather_Json(day_time):  # (1) 기상정보(동네예보정보 조회 서비스) json 파일 생성하는 함수
     jsonData = get_Weather_URL(day_time)
-
-    # if (jsonData['response']['header']['resultMsg'] == 'OK'):
-    #     for prn_data in jsonData['response']['body']['items']['item']:
-    #         json_weather_result.append({'baseDate':prn_data.get('baseDate'), 'baseTime':prn_data.get('baseTime'),
-    #                                     'category':prn_data.get('category'), 'fcstDate':prn_data.get('fcstDate'),
-    #                                     'fcstTime':prn_data.get('fcstTime'), 'fcstValue':prn_data.get('fcstValue'),
-    #                                     'nx':prn_data.get('nx'), 'ny':prn_data.get('ny')})
-    #
-    # with open('동구_신암동_초단기예보조회_%s%s.json' % (yyyymmdd, day_time), 'w', encoding='utf-8') as outfile:
-    #     retJson = json.dumps(json_weather_result, indent=4, sort_keys=True, ensure_ascii=False)
-    #     outfile.write(retJson)
-
     data_for_csv = ['baseDate,baseTime,category,fcstDate,fcstTime,fcstValue,nx,ny']
     if (jsonData['response']['header']['resultMsg'] == 'OK'):
         for prn_data in jsonData['response']['body']['items']['item']:

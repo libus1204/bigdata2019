@@ -107,7 +107,8 @@ def menu_2():
                 SubElement(a, "age").text = new_age
                 SubElement(a, "major").text = new_major
                 SubElement(a, "practicable_computer_languages")
-                ElementTree(root).write("students_info_2.xml", encoding="utf-8", xml_declaration=True)
+                ElementTree(root).write("students_info_2.xml",
+                                        encoding="utf-8", xml_declaration=True)
             else:
                 new_period = input(" > 학습 기간(년/개월 단위) : ")
                 new_level = input(" > 수준(상, 중, 하) : ")

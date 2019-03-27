@@ -51,7 +51,6 @@ def make_dust_Json():
     f = open('동구_신암동_미세먼지prac_%s.csv' % yyyymmdd, 'w')
     f.write('\n'.join(dust_for_csv))
     f.close()
-    print("2")
 json_dust_info = []
 
 make_dust_Json()
