@@ -39,13 +39,13 @@ def bar_chart(feature):
     df.plot(kind='bar', stacked=True, figsize=(10, 5))
     plt.show()
     plt.savefig('titanic_%s' % feature)
-'''
+
 bar_chart('Sex')  # 여자가 남자보다 더 많이 생존
 bar_chart('Pclass')  # 1 < 2 < 3 순으로 많이 사망
 bar_chart('SibSp')  # 동반 형제자매 / 배우자 0명일수록 많이 사망
 bar_chart('Parch')  # 위와 비슷
 bar_chart('Embarked')  # S, Q 는 많이 사망. 상대적으로 C는 덜 사망
-'''
+
 # 데이터 가공하기
 
 # 1. Cabin과 Ticket 두 값은 삭제(값이 비어있고 연관성이 없다는 판단하에)
@@ -170,3 +170,4 @@ clf = RandomForestClassifier(n_estimators=20) # 13개의 decision tree 사용
 scoring = 'accuracy'
 score = cross_val_score(clf, train_data, target, cv=k_fold, n_jobs=1, scoring=scoring)
 print(round(np.mean(score)*100, 2))
+
