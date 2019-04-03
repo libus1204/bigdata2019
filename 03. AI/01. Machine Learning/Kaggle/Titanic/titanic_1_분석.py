@@ -90,7 +90,7 @@ for dataset in combine:
     dataset['Title'] = dataset['Title'].replace('Mlle', 'Miss')
     dataset['Title'] = dataset['Title'].replace('Ms', 'Miss')
     dataset['Title'] = dataset['Title'].replace('Mme', 'Mrs')
-
+train[['Title', 'Survived']].groupby(['Title'], as_index=False).mean()
 '''
     Title  Survived
 0  Master  0.575000
