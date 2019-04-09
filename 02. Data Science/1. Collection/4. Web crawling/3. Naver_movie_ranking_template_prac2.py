@@ -7,7 +7,7 @@ html = urllib.request.urlopen('http://movie.naver.com/movie/sdb/rank/rmovie.nhn'
 soup = BeautifulSoup(html, 'html.parser')
 tags = str(soup)
 
-p_title = re.compile(r'<a href="/movie/bi/mi/basic[.]nhn[?]code=\d*"\stitle="(.*)"')
+p_title = re.compile(r'<a href="/movie/bi/mi/1. Basic Concept[.]nhn[?]code=\d*"\stitle="(.*)"')
 movie_title = p_title.findall(tags)  # 영화 제목 정규식으로 찾기
 # print(movie_title)
 
