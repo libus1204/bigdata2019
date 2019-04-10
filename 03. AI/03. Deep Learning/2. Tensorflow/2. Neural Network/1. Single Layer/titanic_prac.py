@@ -40,7 +40,10 @@ df_test = pd.read_csv('test.csv')
 # print(df_train[['Pclass', 'Survived']].groupby(['Pclass'], as_index=True).count()) # 각 클래스의 사람 수
 # print(df_train[['Pclass', 'Survived']].groupby(['Pclass'], as_index=True).sum()) # 그 클래스에서 생존자 수
 
-pd.crosstab(df_train['Pclass'], df_train['Survived'], margins=True).style.background_gradient(cmap='summer_r')
+print(pd.crosstab(df_train['Pclass'], df_train['Survived'], margins=True))
+    # .style.background_gradient(cmap='summer_r')
 
 df_train[['Pclass', 'Survived']].groupby(['Pclass'], as_index=True).mean().sort_values(by='Survived', \
                                                                                        ascending=False).plot.bar()
+
+
