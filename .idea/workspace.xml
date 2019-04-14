@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="056fcd8a-5692-4ffd-afba-1c90ea887709" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/Clustering_result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_AgeGroup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/0326answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/niaaa-report2009.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/tensorflow/lab03/tf_linear_regression_minimize.png" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1_분석.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3875">
+              <caret line="162" column="38" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/277_hong_count.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_2_데이터가공.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_3_모델링.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/gender_submission.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/test.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/train.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/333.py" />
+        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/students_info.xml" />
+        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/cafe_xml_prac_2.py" />
+        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/cafe_xml_prac.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/ITT_Student_modify.json" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/Simple_Json_exer.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/ITT_Student.json" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/json_addressbook.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/Weather_Realtime_Info_prac.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/sd.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/Scheduler_example.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/naver_datalab.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/naver_silsigan.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/3. Naver_movie_ranking_template.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/naver_music_prac.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/selenium_prac.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/selenium_prac_youtube.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/instagram.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/Smart_Home_Newtwork_v1.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/Weather_Realtime_Info.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/4. Web crawling/dust.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/2. Analysis/3. DB/Student_DB_Scheme.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_1.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_2.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_3.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_4_5_prac.py" />
+        <option value="$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_7_prac.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/0324prac.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/tf_check_version.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/tf_hello.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/tf_computional_graph.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/tf_placeholder.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/04_tf_placeholder.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab02/01_tf_build_graph_using_tf_operation.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab02/02_tf_placeholder.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab03/01_tf_linear_regreesion_minimize.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab03/01_tf_linear_regreesion_gradient_descent.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab03/03_tf_linear_regreesion_minimize_magic.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab03/04_tf_linear_regreesion_minimize_magic2.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab03/05_tf_linear_regreesion_minimize_optional.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab04/01_tf_multi-variable_linear_regression.py" />
+        <option value="$PROJECT_DIR$/03. AI/tensorflow/lab04/02_tf_multi-variable_linear_regression.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/0324prac1.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/0324prac2.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/0324prac3.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/200_cross-iris2.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/10_9_keyword_fred_cluster_final2.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_2_데이터가공.py" />
+        <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1_분석.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-348" />
+    <option name="y" value="-16" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="03. AI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="03. AI" type="462c0819:PsiDirectoryNode" />
+              <item name="02. Text Mining" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="R" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Python_home_repository\03. AI\01. Machine Learning\Kaggle\Titanic" />
+      <recent name="C:\Python_home_repository\03. AI\tensorflow\lab04" />
+      <recent name="C:\Python_home_repository\03. AI\tensorflow\lab03" />
+      <recent name="C:\Python_home_repository\03. AI\01. Machine Learning" />
+      <recent name="C:\Python_home_repository\02. Data Science\3. Statistics\1. Linear Regression Analysis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python_home_repository\03. AI\tensorflow\lab01" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.277_hong_count">
+    <configuration name="277_hong_count" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_local_repository" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/02. Text Mining" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/02. Text Mining/277_hong_count.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="titanic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_local_repository" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Python_home_repository\03. AI\01. Machine Learning\Kaggle\Titanic\titanic_1_분석.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="titanic_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_local_repository" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Python_home_repository\03. AI\01. Machine Learning\Kaggle\Titanic\titanic_1_분석.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="titanic_1_분석" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_local_repository" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1_분석.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="titanic_2_데이터가공" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_local_repository" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_2_데이터가공.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.277_hong_count" />
+        <item itemvalue="Python.titanic_1_분석" />
+        <item itemvalue="Python.titanic_2_데이터가공" />
+        <item itemvalue="Python.titanic_1" />
+        <item itemvalue="Python.titanic" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\이창현\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="056fcd8a-5692-4ffd-afba-1c90ea887709" name="Default Changelist" comment="" />
+      <created>1549544861748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549544861748</updated>
+    </task>
+    <task id="LOCAL-00001" summary="집에서 버전관리를 위한 작업 테스트">
+      <created>1549544972110</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549544972110</updated>
+    </task>
+    <task id="LOCAL-00002" summary="집에서 버전관리를 위한 작업 테스트">
+      <created>1549545256595</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549545256595</updated>
+    </task>
+    <task id="LOCAL-00003" summary="집에서 카페 함수 문제풀이 2019_02_10_16_32">
+      <created>1549783956425</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549783956425</updated>
+    </task>
+    <task id="LOCAL-00004" summary="집에서 카페 함수 문제풀이 2019_02_10_16_39">
+      <created>1549784388771</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1549784388771</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chap05 preview_2019_02_10_17_35">
+      <created>1549787735805</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1549787735805</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2019_02_11_19_13 카페문제풀이완료">
+      <created>1549880010329</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1549880010329</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2019_02_11_21_17 카페문제풀이완료">
+      <created>1549973829792</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1549973829792</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2019_02_14_23_11">
+      <created>1550153518941</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550153518942</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2019_02_17_17_00">
+      <created>1550390409972</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550390409972</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2019_02_20_22_30">
+      <created>1550669416313</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550669416313</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2019_02_20_22_32">
+      <created>1550669581948</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550669581948</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2019_02_24_16_32">
+      <created>1550992333629</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1550992333629</updated>
+    </task>
+    <task id="LOCAL-00013" summary="2019_03_01_19_32">
+      <created>1551436594160</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551436594160</updated>
+    </task>
+    <task id="LOCAL-00014" summary="2019_03_03_17_32">
+      <created>1551602799474</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551602799474</updated>
+    </task>
+    <task id="LOCAL-00015" summary="2019_03_03_22_32">
+      <created>1551620400633</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551620400633</updated>
+    </task>
+    <task id="LOCAL-00016" summary="2019_03_04_21_54">
+      <created>1551704055324</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551704055324</updated>
+    </task>
+    <task id="LOCAL-00017" summary="2019_03_11_21_54">
+      <created>1552306747784</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1552306747784</updated>
+    </task>
+    <task id="LOCAL-00018" summary="2019_03_17_18_10">
+      <created>1552813754954</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552813754954</updated>
+    </task>
+    <task id="LOCAL-00019" summary="2019_03_18_22_10">
+      <created>1552914287433</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1552914287434</updated>
+    </task>
+    <task id="LOCAL-00020" summary="2019_03_24_16_57">
+      <created>1553414292549</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1553414292549</updated>
+    </task>
+    <task id="LOCAL-00021" summary="2019_03_24_17_06">
+      <created>1553414839026</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1553414839027</updated>
+    </task>
+    <task id="LOCAL-00022" summary="2019_03_24_23_34">
+      <created>1553438111992</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1553438111992</updated>
+    </task>
+    <task id="LOCAL-00023" summary="2019_03_25_23_34">
+      <created>1553525592678</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1553525592678</updated>
+    </task>
+    <task id="LOCAL-00024" summary="2019_04_01_23_34">
+      <created>1554125350602</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1554125350602</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1857" height="1096" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25013745" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49972513" weight="0.32917964" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972513" weight="0.3084112" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5002749" weight="0.32917964" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3997923" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2938733" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32917964" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.32917964" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="집에서 버전관리를 위한 작업 테스트" />
+    <MESSAGE value="집에서 카페 함수 문제풀이 2019_02_10_16_32" />
+    <MESSAGE value="집에서 카페 함수 문제풀이 2019_02_10_16_39" />
+    <MESSAGE value="chap05 preview_2019_02_10_17_35" />
+    <MESSAGE value="2019_02_11_19_13 카페문제풀이완료" />
+    <MESSAGE value="2019_02_11_21_17 카페문제풀이완료" />
+    <MESSAGE value="2019_02_14_23_11" />
+    <MESSAGE value="2019_02_17_17_00" />
+    <MESSAGE value="2019_02_20_22_30" />
+    <MESSAGE value="2019_02_20_22_32" />
+    <MESSAGE value="2019_02_24_16_32" />
+    <MESSAGE value="2019_03_01_19_32" />
+    <MESSAGE value="2019_03_03_17_32" />
+    <MESSAGE value="2019_03_03_22_32" />
+    <MESSAGE value="2019_03_04_21_54" />
+    <MESSAGE value="2019_03_11_21_54" />
+    <MESSAGE value="2019_03_17_18_10" />
+    <MESSAGE value="2019_03_18_22_10" />
+    <MESSAGE value="2019_03_24_16_57" />
+    <MESSAGE value="2019_03_24_17_06" />
+    <MESSAGE value="2019_03_24_23_34" />
+    <MESSAGE value="2019_03_25_23_34" />
+    <MESSAGE value="2019_04_01_23_34" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019_04_01_23_34" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/01. Jump to python/chap07/2_XML/xml_practice_2.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/10_9_keyword_fred_cluster_final2.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>max_list_final</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_4_5_prac.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_4_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_graph.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/2. Logistic Regression Analysis/customer_churn_325_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/0318prac.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/predict_house.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_7_prac.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/Housing.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/before_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/184_bmi-create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python37/Lib/site-packages/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="1142" selection-start-line="1142" selection-end-line="1142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab01/01_tf_check_version.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab01/03_tf_hello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab01/02_tf_computional_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab01/04_tf_placeholder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab02/01_tf_build_graph_using_tf_operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab02/02_tf_placeholder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab03/01_tf_linear_regreesion_minimize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab03/02_tf_linear_regreesion_gradient_descent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab03/03_tf_linear_regreesion_minimize_magic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab03/04_tf_linear_regreesion_minimize_magic2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab03/05_tf_linear_regreesion_minimize_optional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab04/01_tf_multi-variable_linear_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab04/02_tf_multi-variable_linear_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/0324prac1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3725">
+          <caret line="149" column="34" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/0324prac2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6000">
+          <caret line="242" selection-start-line="242" selection-end-line="242" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/0324prac3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="214" column="16" selection-start-line="214" selection-start-column="16" selection-end-line="214" selection-end-column="16" />
+          <folding>
+            <element signature="e#7245#7264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/157_iris_train2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/iris.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5c98d60c9b5469/김치우_bmi_create.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5c98d6199b8410/김치우_bmi_test.py" />
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/0326answer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/홍길동_비지도학습_적용_및_해석.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4016">
+          <caret line="178" column="34" lean-forward="true" selection-start-line="178" selection-start-column="34" selection-end-line="178" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/2. Analysis/1. CSV/9csv_reader_concat_rows_from_multiple_files.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/Smart_Home_Newtwork_v1_prac.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/10_9_keyword_fred_cluster_final.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4700">
+          <caret line="193" column="16" selection-start-line="193" selection-start-column="16" selection-end-line="193" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/10_9_keyword_fred_cluster_final2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4450">
+          <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/200_cross-iris2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/online_retail_utf.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="125">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/Smart_Home_Newtwork_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/1. konlpy-basic.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_random_forest.py" />
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1_분석.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3875">
+          <caret line="162" column="38" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_2_데이터가공.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_3_모델링.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/gender_submission.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/train.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/277_hong_count.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
