@@ -1,0 +1,26 @@
+1.
+print(Counter(product_name_keyword).most_common(20))
+
+2.
+print(Counter(bigram).most_common(20))
+
+3.
+line_items = line.strip().split('\t')
+user_code = line.items[6]
+product_id = line_items[1]
+product_name = line_items[2]
+
+4.
+for k in range(2, 9):
+	km = KMeans(n_cluster=k).fit(test_data)
+	print("score for %d clusters : %.3f" % (k, silhouette_score(test_data, km.labels_)))
+
+5.
+analyze_clusters_keywords(km.labels_, product_id_name_dic, user_product_dic, id_user_dic)
+
+6.
+km = KMeans(n_clusters=2, n_init=10, max_iter=20)
+
+7.
+analyze_clusters_keywords_bigram(km.labels_, product_id_name_dic, user_product_dic, id_user_dic)
+
