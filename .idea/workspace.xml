@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="056fcd8a-5692-4ffd-afba-1c90ea887709" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/Clustering_result.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_AgeGroup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/clustering/0326answer.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03. AI/01. Machine Learning/niaaa-report2009.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03. AI/tensorflow/lab03/tf_linear_regression_minimize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/02. Text Mining/SMSSpamCollection" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/02. Text Mining/processed.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/Dataset.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/SMSSpamCollection" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/processed_review.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/smsspamcollection.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/womens-ecommerce-clothing-reviews.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/womens_clothing_reviews.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_logistic_regression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_preprocessing_scikit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_tensorflow.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. AI/tensorflow_prac/Tensorflow.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpenAPI_사용자지침서_V1.37.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. AI/02. Text Mining/11-4-preprocessing-scikit.py" beforeDir="false" afterPath="$PROJECT_DIR$/03. AI/02. Text Mining/11-4-preprocessing-scikit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. AI/02. Text Mining/11-5-logistic-regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/03. AI/02. Text Mining/11-5-logistic-regression.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,25 +28,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Python_local_repository" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1_분석.py">
+        <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/11-4-preprocessing-scikit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3875">
-              <caret line="162" column="38" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="27">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/277_hong_count.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/11-5-logistic-regression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="299">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -43,39 +55,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_2_데이터가공.py">
+        <entry file="file://$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_preprocessing_scikit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="552">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#90#103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_logistic_regression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_3_모델링.py">
+        <entry file="file://C:/Python37/Lib/codecs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            <state relative-caret-position="186">
+              <caret line="311" selection-start-line="311" selection-end-line="311" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/gender_submission.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/test.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/train.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://C:/Python37/Lib/site-packages/sklearn/linear_model/logistic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="432" selection-start-line="432" selection-end-line="432" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -93,13 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/333.py" />
-        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/students_info.xml" />
-        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/cafe_xml_prac_2.py" />
-        <option value="$PROJECT_DIR$/01. Jump to python/chap07/2_XML/cafe_xml_prac.py" />
-        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/ITT_Student_modify.json" />
-        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/Simple_Json_exer.py" />
-        <option value="$PROJECT_DIR$/02. Data Science/1. Collection/ITT_Student.json" />
         <option value="$PROJECT_DIR$/02. Data Science/1. Collection/json_addressbook.py" />
         <option value="$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/Weather_Realtime_Info_prac.py" />
         <option value="$PROJECT_DIR$/02. Data Science/1. Collection/3. Data.go.kr/sd.py" />
@@ -144,6 +155,13 @@
         <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1.py" />
         <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_2_데이터가공.py" />
         <option value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1_분석.py" />
+        <option value="$PROJECT_DIR$/03. AI/03. Deep Learning/project/SMSSpamCollection" />
+        <option value="$PROJECT_DIR$/03. AI/02. Text Mining/11-5-logistic-regression.py" />
+        <option value="$PROJECT_DIR$/03. AI/02. Text Mining/11-4-preprocessing-scikit.py" />
+        <option value="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_text_mining2.py" />
+        <option value="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_text_mining.py" />
+        <option value="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_preprocessing_scikit.py" />
+        <option value="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_logistic_regression.py" />
       </list>
     </option>
   </component>
@@ -166,24 +184,37 @@
         <subPane>
           <expand>
             <path>
-              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="Python_local_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_local_repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="Python_local_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_local_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="02. Data Science" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_local_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_local_repository" type="462c0819:PsiDirectoryNode" />
               <item name="03. AI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="Python_local_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_local_repository" type="462c0819:PsiDirectoryNode" />
               <item name="03. AI" type="462c0819:PsiDirectoryNode" />
               <item name="02. Text Mining" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Python_home_repository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_home_repository" type="462c0819:PsiDirectoryNode" />
-              <item name="R" type="462c0819:PsiDirectoryNode" />
+              <item name="Python_local_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_local_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="03. AI" type="462c0819:PsiDirectoryNode" />
+              <item name="03. Deep Learning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_local_repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_local_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="03. AI" type="462c0819:PsiDirectoryNode" />
+              <item name="03. Deep Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,15 +226,15 @@
     <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python_home_repository\03. AI\tensorflow\lab01" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python_local_repository\03. AI\03. Deep Learning\project" />
       <recent name="C:\Python_home_repository\03. AI\01. Machine Learning\Kaggle\Titanic" />
       <recent name="C:\Python_home_repository\03. AI\tensorflow\lab04" />
       <recent name="C:\Python_home_repository\03. AI\tensorflow\lab03" />
       <recent name="C:\Python_home_repository\03. AI\01. Machine Learning" />
-      <recent name="C:\Python_home_repository\02. Data Science\3. Statistics\1. Linear Regression Analysis" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Python_home_repository\03. AI\tensorflow\lab01" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -218,8 +249,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.277_hong_count">
-    <configuration name="277_hong_count" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.김상민_logistic_regression">
+    <configuration name="11-5-logistic-regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python_local_repository" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -231,7 +262,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/02. Text Mining/277_hong_count.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/02. Text Mining/11-5-logistic-regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,7 +271,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="titanic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="김상민_logistic_regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python_local_repository" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,11 +279,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/03. Deep Learning/project" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Python_home_repository\03. AI\01. Machine Learning\Kaggle\Titanic\titanic_1_분석.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_logistic_regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,7 +292,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="titanic_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="김상민_preprocessing_scikit" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python_local_repository" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -269,11 +300,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/03. Deep Learning/project" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Python_home_repository\03. AI\01. Machine Learning\Kaggle\Titanic\titanic_1_분석.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_preprocessing_scikit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -282,7 +313,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="titanic_1_분석" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="김상민_text_mining" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python_local_repository" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -290,11 +321,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/03. Deep Learning/project" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_1_분석.py" />
+      <option name="SCRIPT_NAME" value="D:\Python_local_repository\03. AI\03. Deep Learning\project\김상민_preprocessing_scikit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,7 +334,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="titanic_2_데이터가공" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="김상민_text_mining2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python_local_repository" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -311,11 +342,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03. AI/03. Deep Learning/project" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03. AI/01. Machine Learning/Kaggle/Titanic/titanic_2_데이터가공.py" />
+      <option name="SCRIPT_NAME" value="D:\Python_local_repository\03. AI\03. Deep Learning\project\김상민_logistic_regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,13 +355,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.11-5-logistic-regression" />
+      <item itemvalue="Python.김상민_text_mining" />
+      <item itemvalue="Python.김상민_text_mining2" />
+      <item itemvalue="Python.김상민_logistic_regression" />
+      <item itemvalue="Python.김상민_preprocessing_scikit" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.277_hong_count" />
-        <item itemvalue="Python.titanic_1_분석" />
-        <item itemvalue="Python.titanic_2_데이터가공" />
-        <item itemvalue="Python.titanic_1" />
-        <item itemvalue="Python.titanic" />
+        <item itemvalue="Python.김상민_logistic_regression" />
+        <item itemvalue="Python.김상민_preprocessing_scikit" />
+        <item itemvalue="Python.김상민_text_mining2" />
+        <item itemvalue="Python.김상민_text_mining" />
+        <item itemvalue="Python.11-5-logistic-regression" />
       </list>
     </recent_temporary>
   </component>
@@ -526,19 +564,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1857" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25013745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23836389" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49972513" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972513" weight="0.3084112" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5002749" weight="0.32917964" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3997923" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972513" visible="true" weight="0.30820996" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5002749" weight="0.32839838" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2938733" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2938733" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32917964" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32917964" />
@@ -546,6 +584,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23836389" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49972513" weight="0.32917964" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49972513" visible="true" weight="0.30820996" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5002749" weight="0.32839838" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39973083" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2938733" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32917964" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.32917964" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -626,6 +683,11 @@
           <line>28</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/03. AI/02. Text Mining/11-4-preprocessing-scikit.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -639,81 +701,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_4_5_prac.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_4_5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_graph.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/2. Logistic Regression Analysis/customer_churn_325_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/0318prac.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/predict_house.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/wine_quality_7_prac.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02. Data Science/3. Statistics/1. Linear Regression Analysis/Housing.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/03. AI/01. Machine Learning/before_test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -724,13 +711,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Python37/Lib/site-packages/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="1142" selection-start-line="1142" selection-end-line="1142" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python37/Lib/site-packages/sklearn/metrics/classification.py" />
     <entry file="file://$PROJECT_DIR$/03. AI/tensorflow/lab01/01_tf_check_version.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -981,6 +962,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_tensorflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/03. Deep Learning/project/blood_pressure.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/03. Deep Learning/project/SMSSpamCollection">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python37/Lib/site-packages/pandas/io/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python37/Lib/site-packages/sklearn/linear_model/logistic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="432" selection-start-line="432" selection-end-line="432" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python37/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/11-5-logistic-regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/02. Text Mining/11-4-preprocessing-scikit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_preprocessing_scikit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#90#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03. AI/03. Deep Learning/project/김상민_logistic_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

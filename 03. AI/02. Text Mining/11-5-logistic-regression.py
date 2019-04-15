@@ -12,7 +12,7 @@ train_features = features[:middle_index, :]
 train_lables = labels[:middle_index]
 test_features = features[middle_index:, :]
 test_lables = labels[middle_index:]
-
+print(type(train_features[3]))
 classifier = LogisticRegression()
 classifier.fit(train_features, train_lables)
 print('train accuracy : %4.4f' % classifier.score(train_features, train_lables))

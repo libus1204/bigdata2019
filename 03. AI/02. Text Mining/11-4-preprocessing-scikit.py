@@ -19,7 +19,7 @@ with open('SMSSpamCollection', 'r', encoding = 'UTF8') as file_handle:
         elif line.startswith(no_spam_header):
             labels.append(0)
             documents.append(line[len(no_spam_header):])
-
+print(type(documents[1]))
 vectorizer = CountVectorizer() # 단어 횟수 피처를 만드는 클래스
 term_counts = vectorizer.fit_transform(documents) # 문서에서 단어 횟수 세기
 vocabulary = vectorizer.get_feature_names()
